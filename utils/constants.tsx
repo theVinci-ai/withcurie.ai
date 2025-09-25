@@ -15,3 +15,25 @@ export const ownerDetail = {
   facebook: 'https://www.facebook.com/karthik-sivakumar',
   calendlyLink: 'https://calendly.com/karthik-withpractice',
 };
+
+// App Routes
+export const appRoute = {
+  default: '/',
+  signUp: '/signup',
+  login: '/login',
+  contact: '/contact',
+  privacyPolicy: '/privacy-policy',
+  termAndConditions: '/terms-and-conditions',
+  demo: 'https://calendly.com/karthik-withpractice',
+  products: '/products',
+  pricing: '/pricing',
+  testimonials: '/testimonials',
+  featureDemo: '/feature-demo',
+};
+
+// Footer Links
+export const footerLinks = [
+  { text: 'Contact Us', href: appRoute.contact, target: '' },
+  { text: 'Privacy Policy', href: appRoute.privacyPolicy, target: '' },
+  { text: 'Terms & Conditions', href: appRoute.termAndConditions, target: '' },
+];

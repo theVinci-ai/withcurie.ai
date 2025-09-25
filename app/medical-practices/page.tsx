@@ -238,7 +238,7 @@ export default function MedicalPracticesPage() {
             </h2>
             <p className='text-xl text-[#9096A2] max-w-5xl mx-auto'>
               Real outcomes from healthcare organizations that transformed their
-              operations with Practice AI
+              operations with Curie AI
             </p>
           </div>
         </div>
@@ -397,7 +397,7 @@ export default function MedicalPracticesPage() {
                 <div className='grid grid-cols-3 gap-4 mb-6'>
                   <div className='text-center'>
                     <div className='w-10 h-10 bg-[#A73CDD1A] rounded-[12px] flex items-center justify-center mx-auto mb-2'>
-                      <TrendingUp className='w-5 h-5 text-white' />
+                      <TrendingUp className='w-5 h-5 text-[#A73CDD]' />
                     </div>
                     <div className='text-white font-bold'>98%</div>
                     <div className='text-[#9096A2] text-xs'>
@@ -406,14 +406,14 @@ export default function MedicalPracticesPage() {
                   </div>
                   <div className='text-center'>
                     <div className='w-10 h-10 bg-[#A73CDD1A] rounded-[12px] flex items-center justify-center mx-auto mb-2'>
-                      <DollarSign className='w-5 h-5 text-white' />
+                      <DollarSign className='w-5 h-5 text-[#A73CDD]' />
                     </div>
                     <div className='text-white font-bold'>$15M</div>
                     <div className='text-[#9096A2] text-xs'>Annual Savings</div>
                   </div>
                   <div className='text-center'>
                     <div className='w-10 h-10 bg-[#A73CDD1A] rounded-[12px] flex items-center justify-center mx-auto mb-2'>
-                      <BarChart3 className='w-5 h-5 text-white' />
+                      <Clock className='w-5 h-5 text-[#A73CDD]' />
                     </div>
                     <div className='text-white font-bold'>-75%</div>
                     <div className='text-[#9096A2] text-xs'>Process Time</div>
@@ -432,8 +432,8 @@ export default function MedicalPracticesPage() {
 
       {/* Statistics Section */}
       <section className='relative overflow-hidden bg-[#07090D]'>
-        <div className='text-center relative pt-20 pb-32 md:pb-40 lg:pb-70 '>
-          <div className='flex flex-col mx-auto justify-between items-center gap-4 md:gap-6 mt-1 md:mt-20'>
+        <div className='text-center relative pt-12 pb-32 md:pb-40 lg:pb-70 '>
+          <div className='flex flex-col mx-auto justify-between items-center gap-4 md:gap-6 '>
             <div className="text-center text-[#919191] md:text-white text-sm md:text-[22px] font-gilroy-medium md:font-['DM Mono'] text-normal">
               Backed By
             </div>
@@ -464,8 +464,8 @@ export default function MedicalPracticesPage() {
               Supercharge your back office with state of the art AI, built for
               your practice.
             </div>
-            <div className='max-w-[969px] text-center text-white text-[22px] font-light font-dm-sans leading-[50px]'>
-              Practice AI leverages integrated AI features to streamline
+            <div className='max-w-[838px] text-center text-[#ABB0BA] text-[20px] font-light font-dm-sans leading-[50px]'>
+              Curie AI leverages integrated AI features to streamline
               operations—from EHR sync, Scribe, Medical Coding, Billing to
               Payment Processing
             </div>
@@ -488,7 +488,7 @@ export default function MedicalPracticesPage() {
               <div className='hidden md:block backdrop-blur-[30px] rounded-[48px] max-w-full'>
                 <Image
                   src={images.timelineLightDiv}
-                  alt='Timeline to show time taken by Practice AI from Visiting EHR to getting payment. Will be done in days'
+                  alt='Timeline to show time taken by Curie AI from Visiting EHR to getting payment. Will be done in days'
                   width={812}
                   height={590}
                   className='w-full h-auto'
@@ -506,7 +506,7 @@ export default function MedicalPracticesPage() {
               <div className='hidden md:block backdrop-blur-[15px] rounded-[48px] max-w-full'>
                 <Image
                   src={images.timelineDarkDiv}
-                  alt='Timeline to show time taken by Practice AI from Visiting EHR to getting payment. Will be done in days'
+                  alt='Timeline to show time taken by Curie AI from Visiting EHR to getting payment. Will be done in days'
                   width={812}
                   height={590}
                   className='w-full h-auto'
@@ -521,7 +521,7 @@ export default function MedicalPracticesPage() {
         <GenerateNotes />
       </section>
 
-      {/* Imported Practice AI Home Component */}
+      {/* Imported Curie AI Home Component */}
       <section className='py-0'>
         <PracticeAIHome />
       </section>
@@ -583,10 +583,10 @@ export default function MedicalPracticesPage() {
               <CheckCircle className='w-5 h-5' />
               <span>SOC2 Type II</span>
             </div>
-            <div className='flex items-center space-x-2'>
+            {/* <div className='flex items-center space-x-2'>
               <Award className='w-5 h-5' />
               <span>ISO 27001</span>
-            </div>
+            </div> */}
             <div className='flex items-center space-x-2'>
               <div className='w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center'>
                 <span className='text-black font-bold text-xs'>G</span>

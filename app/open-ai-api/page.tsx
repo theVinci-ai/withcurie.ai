@@ -17,7 +17,7 @@ export default function OpenAIAPIPage() {
       <div className='flex flex-col items-center justify-center min-h-screen relative z-10 text-center px-4'>
         {/* Heading */}
         <h1 className='text-3xl md:text-5xl font-bold mb-4'>
-          OPEN API Of Practice AI
+          OPEN API Of Curie AI
         </h1>
         {/* Subheading */}
         <p className='text-lg md:text-xl text-gray-300'>Coming Soon.</p>

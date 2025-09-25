@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ownerDetail } from '@/utils/constants';
 import {
@@ -15,8 +16,9 @@ import {
 import Image from 'next/image';
 
 export default function HomePage() {
+  const [activeTab, setActiveTab] = useState('medical');
   return (
-    <div className='min-h-screen bg-[#07090D] text-white'>
+    <div className='min-h-screen bg-[#07090D] text-white overflow--hidden'>
       {/* Hero Section with Background */}
       <div className='relative overflow-hidden'>
         <div className='absolute inset-0'>
@@ -48,27 +50,23 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p className='text-2xl md:text-xl text-gray-300 mb-18 max-w-4xl mx-auto text-balance font-light leading-relaxed'>
-              Transform your operations with intelligent AI solutions that
-              deliver{' '}
-              <span className='text-[#A7BA34] font-medium'>
-                measurable results
-              </span>{' '}
-              across Medical Practices, Enterprise Practices, and Enterprises
+            <p className='text-2xl md:text-xl text-gray-300 mb-18 max-w-xl mx-auto text- font-light leading-relaxed'>
+              One platform. Infinite scale. Measurable outcomes for any
+              healthcare organization.
             </p>
 
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-23'>
-              <Button className='bg-[#4A6F3E] hover:bg-[#5A7F4E] text-[#FAFAFA] px-6 py-3 text-base rounded-lg flex items-center min-w-[269px] min-h-[44px] justify-center shadow-[0_0_30px_rgba(74,111,62,0.6)] hover:shadow-[0_0_40px_rgba(74,111,62,0.8)] transition-all duration-300 border border-[#4A6F3E]/50'>
+            <div className='flex flex-col sm:flex-row md:gap-6 gap-4 justify-center items-center mb-23'>
+              <Button className='bg-[#4A6F3E] hover:bg-[#5A7F4E] text-[#FAFAFA] !px-8 !py-3 text-lg rounded-lg flex items-center min-w-[269px] min-h-[44px] justify-center shadow-[0_0_30px_rgba(74,111,62,0.6)] hover:shadow-[0_0_40px_rgba(74,111,62,0.8)] transition-all duration-300 border border-[#4A6F3E]/50'>
                 For Medical Practices
-                <ArrowRight className='w-4 h-4 ml-2' />
+                <ArrowRight className='w-4 h-4 ml-' />
               </Button>
-              <Button className='bg-[#FCFCFC] text-[#171D26] hover:bg-gray-100 px-6 py-3 text-base rounded-lg flex items-center min-w-[291px] min-h-[44px] justify-center shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:shadow-[0_0_40px_rgba(255,255,255,0.6)] transition-all duration-300 border border-white/30'>
+              <Button className='bg-[#FCFCFC] text-[#171D26] hover:bg-gray-100 !px-8 !py-3 text-lg rounded-lg flex items-center min-w-[291px] min-h-[44px] justify-center shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:shadow-[0_0_40px_rgba(255,255,255,0.6)] transition-all duration-300 border border-white/30'>
                 For Enterprise Practices
-                <ArrowRight className='w-4 h-4 ml-2' />
+                <ArrowRight className='w-4 h-4 ml-' />
               </Button>
-              <Button className='bg-[#B7E6FA] hover:bg-blue-500 text-[#171D26] px-6 py-3 text-base rounded-lg flex items-center min-w-[219px] min-h-[44px] justify-center shadow-[0_0_30px_rgba(96,165,250,0.5)] hover:shadow-[0_0_40px_rgba(96,165,250,0.7)] transition-all duration-300 border border-blue-300/40'>
+              <Button className='bg-[#B7E6FA] hover:bg-[#B7E6FA]/90 text-[#171D26] !px-8 !py-3 text-lg rounded-lg flex items-center min-w-[219px] min-h-[44px] justify-center shadow-[0_0_30px_rgba(96,165,250,0.5)] hover:shadow-[0_0_40px_rgba(96,165,250,0.7)] transition-all duration-300 border border-blue-300/40'>
                 For Enterprises
-                <ArrowRight className='w-4 h-4 ml-2' />
+                <ArrowRight className='w-4 h-4 ml-' />
               </Button>
             </div>
 
@@ -132,7 +130,7 @@ export default function HomePage() {
 
           {/* Tab Navigation */}
           <div
-            className='p-2 inline-flex'
+            className='p-1 sm:p-2 md:w-fit mx-auto flex overflow-x-auto scrollbar-hide'
             style={{
               borderRadius: '16px',
               border: '1px solid rgba(218, 231, 224, 0.20)',
@@ -141,19 +139,58 @@ export default function HomePage() {
             }}
           >
             <button
-              className='bg-[#4A6F3E] text-white px-8 py-4 rounded-xl flex items-center space-x-3 transition-all duration-300'
-              style={{ boxShadow: '0 0 32px 0 rgba(99, 233, 184, 0.30)' }}
+              onClick={() => setActiveTab('medical')}
+              className={`px-3 cursor-pointer sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl flex items-center space-x-2 sm:space-x-3 transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
+                activeTab === 'medical'
+                  ? 'bg-[#4A6F3E] text-white'
+                  : 'text-[#9096A2] hover:text-white'
+              }`}
+              style={
+                activeTab === 'medical'
+                  ? { boxShadow: '0 0 32px 0 rgba(99, 233, 184, 0.30)' }
+                  : {}
+              }
             >
-              <Stethoscope className='w-5 h-5' />
-              <span className='font-medium'>Medical Practices</span>
+              <Stethoscope className='w-4 h-4 sm:w-5 sm:h-5' />
+              <span className='font-medium text-sm sm:text-base'>
+                Medical Practices
+              </span>
             </button>
-            <button className='text-[#9096A2] hover:text-white px-8 py-4 rounded-xl flex items-center space-x-3 transition-all duration-300'>
-              <Building2 className='w-5 h-5' />
-              <span className='font-medium'>Enterprise Practices</span>
+            <button
+              onClick={() => setActiveTab('enterprise')}
+              className={`px-3 cursor-pointer sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl flex items-center space-x-2 sm:space-x-3 transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
+                activeTab === 'enterprise'
+                  ? 'bg-[#4A6F3E] text-white'
+                  : 'text-[#9096A2] hover:text-white'
+              }`}
+              style={
+                activeTab === 'enterprise'
+                  ? { boxShadow: '0 0 32px 0 rgba(99, 233, 184, 0.30)' }
+                  : {}
+              }
+            >
+              <Building2 className='w-4 h-4 sm:w-5 sm:h-5' />
+              <span className='font-medium text-sm sm:text-base'>
+                Enterprise Practices
+              </span>
             </button>
-            <button className='text-[#9096A2] hover:text-white px-8 py-4 rounded-xl flex items-center space-x-3 transition-all duration-300'>
-              <Building className='w-5 h-5' />
-              <span className='font-medium'>Enterprises</span>
+            <button
+              onClick={() => setActiveTab('enterprises')}
+              className={`px-3 cursor-pointer sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl flex items-center space-x-2 sm:space-x-3 transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
+                activeTab === 'enterprises'
+                  ? 'bg-[#4A6F3E] text-white'
+                  : 'text-[#9096A2] hover:text-white'
+              }`}
+              style={
+                activeTab === 'enterprises'
+                  ? { boxShadow: '0 0 32px 0 rgba(99, 233, 184, 0.30)' }
+                  : {}
+              }
+            >
+              <Building className='w-4 h-4 sm:w-5 sm:h-5' />
+              <span className='font-medium text-sm sm:text-base'>
+                Enterprises
+              </span>
             </button>
           </div>
         </div>
@@ -273,18 +310,10 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-
-              {/* CTA Button */}
-              <div className='pt-6'>
-                <Button className='bg-[#4A6F3E] hover:bg-[#5A7F4E] text-white px-8 py-3 rounded-lg flex items-center'>
-                  Learn More About Medical Practices
-                  <ArrowRight className='w-4 h-4 ml-2' />
-                </Button>
-              </div>
             </div>
 
             {/* Right Side - Code Preview */}
-            <div className='lg:sticky lg:top-8'>
+            <div className='sticky lg:top-20'>
               <div className='bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden'>
                 {/* Code Editor Header */}
                 <div className='bg-gray-800 px-4 py-3 flex items-center justify-between border-b border-gray-700'>
@@ -357,6 +386,13 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        {/* CTA Button */}
+        <div className='pt-16 max-w-[1440px] mx-auto md:pl-6'>
+          <Button className='bg-[#4A6F3E] hover:bg-[#3d5a33] text-white !px-8 !py-3 rounded-xl flex items-center h-11'>
+            Learn More About Medical Practices
+            <ArrowRight className='w-4 h-4 ml-2' />
+          </Button>
+        </div>
       </section>
 
       {/* Future of Healthcare Section */}
@@ -365,7 +401,7 @@ export default function HomePage() {
           {/* Header */}
           <div className='text-center mb-16'>
             <div className='text-[12px] text-[#799B4B] border border-[#799B4B33] px-3 py-1 rounded-full mb-4 w-fit mx-auto'>
-              Why Choose Practice AI
+              Why Choose Curie AI
             </div>
             <h2 className='text-4xl md:text-5xl font-bold text-[#FAFAFA] text-balance'>
               The Future of Healthcare{' '}
@@ -490,7 +526,7 @@ export default function HomePage() {
                 }}
                 className='text-transparent'
               >
-                to Know About Practice AI
+                to Know About Curie AI
               </div>
             </h2>
             <p className='text-[#ABB0BA] text-xl max-w-3xl mx-auto '>
@@ -505,15 +541,15 @@ export default function HomePage() {
             <details className='group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm'>
               <summary className='flex items-center justify-between p-6 cursor-pointer list-none'>
                 <span className='text-[#FAFAFA] text-lg font-medium'>
-                  How quickly can Practice AI be implemented?
+                  How quickly can Curie AI be implemented?
                 </span>
                 <ChevronDown className='w-5 h-5 text-[#FAFAFA] group-open:rotate-180 transition-transform duration-200' />
               </summary>
               <div className='px-6 pb-6 text-[#FAFAFA] leading-relaxed'>
-                Practice AI can be deployed within 24-48 hours for most
-                healthcare organizations. Our cloud-native architecture allows
-                for rapid integration with existing EHR systems including Epic,
-                Cerner, and Allscripts. The implementation process includes data
+                Curie AI can be deployed within 24-48 hours for most healthcare
+                organizations. Our cloud-native architecture allows for rapid
+                integration with existing EHR systems including Epic, Cerner,
+                and Allscripts. The implementation process includes data
                 migration, staff training, and workflow optimization to ensure
                 seamless adoption across your practice.
               </div>
@@ -523,17 +559,17 @@ export default function HomePage() {
             <details className='group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm'>
               <summary className='flex items-center justify-between p-6 cursor-pointer list-none'>
                 <span className='text-[#FAFAFA] text-lg font-medium'>
-                  Is Practice AI HIPAA compliant and secure?
+                  Is Curie AI HIPAA compliant and secure?
                 </span>
                 <ChevronDown className='w-5 h-5 text-[#FAFAFA] group-open:rotate-180 transition-transform duration-200' />
               </summary>
               <div className='px-6 pb-6 text-[#FAFAFA] leading-relaxed'>
-                Yes, Practice AI is fully HIPAA compliant and maintains SOC 2
-                Type II certification. We employ end-to-end encryption,
-                multi-factor authentication, and regular security audits. All
-                patient data is processed and stored in secure, HIPAA-compliant
-                cloud infrastructure with 99.9% uptime guarantee and
-                comprehensive backup systems.
+                Yes, Curie AI is fully HIPAA compliant and maintains SOC 2 Type
+                II certification. We employ end-to-end encryption, multi-factor
+                authentication, and regular security audits. All patient data is
+                processed and stored in secure, HIPAA-compliant cloud
+                infrastructure with 99.9% uptime guarantee and comprehensive
+                backup systems.
               </div>
             </details>
 
@@ -541,12 +577,12 @@ export default function HomePage() {
             <details className='group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm'>
               <summary className='flex items-center justify-between p-6 cursor-pointer list-none'>
                 <span className='text-[#FAFAFA] text-lg font-medium'>
-                  What EHR systems does Practice AI integrate with?
+                  What EHR systems does Curie AI integrate with?
                 </span>
                 <ChevronDown className='w-5 h-5 text-[#FAFAFA] group-open:rotate-180 transition-transform duration-200' />
               </summary>
               <div className='px-6 pb-6 text-[#FAFAFA] leading-relaxed'>
-                Practice AI integrates seamlessly with all major EHR systems
+                Curie AI integrates seamlessly with all major EHR systems
                 including Epic, Cerner, Allscripts, athenahealth,
                 eClinicalWorks, and NextGen. Our API-first approach ensures
                 compatibility with custom and legacy systems. We also support
@@ -559,7 +595,7 @@ export default function HomePage() {
             <details className='group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm'>
               <summary className='flex items-center justify-between p-6 cursor-pointer list-none'>
                 <span className='text-[#FAFAFA] text-lg font-medium'>
-                  How much can I expect to save with Practice AI?
+                  How much can I expect to save with Curie AI?
                 </span>
                 <ChevronDown className='w-5 h-5 text-[#FAFAFA] group-open:rotate-180 transition-transform duration-200' />
               </summary>
@@ -578,12 +614,12 @@ export default function HomePage() {
             <details className='group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm'>
               <summary className='flex items-center justify-between p-6 cursor-pointer list-none'>
                 <span className='text-[#FAFAFA] text-lg font-medium'>
-                  Do I need technical expertise to use Practice AI?
+                  Do I need technical expertise to use Curie AI?
                 </span>
                 <ChevronDown className='w-5 h-5 text-[#FAFAFA] group-open:rotate-180 transition-transform duration-200' />
               </summary>
               <div className='px-6 pb-6 text-[#FAFAFA] leading-relaxed'>
-                No technical expertise is required. Practice AI is designed with
+                No technical expertise is required. Curie AI is designed with
                 healthcare professionals in mind, featuring an intuitive
                 interface that integrates naturally into existing workflows. Our
                 comprehensive training program includes hands-on sessions, video
@@ -666,10 +702,6 @@ export default function HomePage() {
             <div className='flex items-center space-x-2'>
               <CheckCircle className='w-5 h-5' />
               <span>SOC2 Type II</span>
-            </div>
-            <div className='flex items-center space-x-2'>
-              <Award className='w-5 h-5' />
-              <span>ISO 27001</span>
             </div>
             <div className='flex items-center space-x-2'>
               <div className='w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center'>
