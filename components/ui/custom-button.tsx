@@ -37,7 +37,7 @@ export function CustomButton({
     <button
       type={type}
       onClick={onClick}
-      className={`inline-flex items-center font-medium transition-all duration-300 ${className}`}
+      className={`inline-flex items-center  font-medium transition-all cursor-pointer duration-300 ${className}`}
       style={{
         width: width,
         height: "40px",

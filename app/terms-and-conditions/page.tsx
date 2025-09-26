@@ -3,24 +3,24 @@ import Link from 'next/link';
 
 export default function TermsAndConditionsPage() {
   return (
-    <div className='min-h-screen justify-center text-center bg-white'>
+    <div className='min-h-screen justify-center text-center bg-[#07090D]'>
       {/* Main Content */}
       <main className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='prose prose-lg max-w-none'>
-          <h1 className='text-4xl font-bold text-[#0A0C10] mb-8'>
+          <h1 className='text-4xl font-bold text-white mb-8'>
             Terms & Conditions
           </h1>
 
-          <div className='text-sm text-gray-600 mb-8'>
+          <div className='text-sm text-[#D1D5DB] mb-8'>
             Last updated: September 24, 2025
           </div>
 
           <div className='space-y-8 text-gray-700'>
             <section>
-              <h2 className='text-2xl font-semibold text-[#0A0C10] mb-4'>
+              <h2 className='text-2xl font-semibold text-white mb-4'>
                 Acceptance of Terms
               </h2>
-              <p className='text-lg leading-relaxed'>
+              <p className=' leading-relaxed text-[#D1D5DB]'>
                 By accessing and using Curie AI's services, you accept and agree
                 to be bound by the terms and provision of this agreement. If you
                 do not agree to abide by the above, please do not use this
@@ -29,14 +29,14 @@ export default function TermsAndConditionsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-semibold text-[#0A0C10] mb-4'>
+              <h2 className='text-2xl font-semibold text-white mb-4'>
                 Description of Service
               </h2>
-              <p className='text-lg leading-relaxed mb-4'>
+              <p className='text-sm leading-relaxed mb-4 text-[#D1D5DB]'>
                 Curie AI provides AI-powered healthcare workflow solutions
                 including:
               </p>
-              <ul className='list-disc list-inside space-y-2 text-lg'>
+              <ul className='list-disc list-inside space-y-2 text-[#D1D5DB]'>
                 <li>Visit AI - Patient summary generation</li>
                 <li>Scribe AI - Medical note transcription and generation</li>
                 <li>Coding AI - Medical code generation</li>
@@ -46,13 +46,13 @@ export default function TermsAndConditionsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-semibold text-[#0A0C10] mb-4'>
+              <h2 className='text-2xl font-semibold text-white mb-4'>
                 User Responsibilities
               </h2>
-              <p className='text-lg leading-relaxed mb-4'>
+              <p className='text-lg leading-relaxed mb-4 text-[#D1D5DB]'>
                 As a user of our services, you agree to:
               </p>
-              <ul className='list-disc list-inside space-y-2 text-lg'>
+              <ul className='list-disc list-inside space-y-2 text-[#D1D5DB]'>
                 <li>Provide accurate and complete information</li>
                 <li>Maintain the security of your account credentials</li>
                 <li>
@@ -65,10 +65,10 @@ export default function TermsAndConditionsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-semibold text-[#0A0C10] mb-4'>
+              <h2 className='text-2xl font-semibold text-white mb-4'>
                 Healthcare Compliance
               </h2>
-              <p className='text-lg leading-relaxed'>
+              <p className='text-[#D1D5DB] leading-relaxed'>
                 Curie AI operates in compliance with healthcare regulations
                 including HIPAA. Users are responsible for ensuring their use of
                 our services complies with all applicable healthcare laws and
@@ -77,10 +77,10 @@ export default function TermsAndConditionsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-semibold text-[#0A0C10] mb-4'>
+              <h2 className='text-2xl font-semibold text-white mb-4'>
                 Intellectual Property
               </h2>
-              <p className='text-lg leading-relaxed'>
+              <p className='text-[#D1D5DB] leading-relaxed'>
                 All content, features, and functionality of Curie AI services
                 are owned by Curie AI and are protected by international
                 copyright, trademark, patent, trade secret, and other
@@ -89,10 +89,10 @@ export default function TermsAndConditionsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-semibold text-[#0A0C10] mb-4'>
+              <h2 className='text-2xl font-semibold text-white mb-4'>
                 Limitation of Liability
               </h2>
-              <p className='text-lg leading-relaxed'>
+              <p className='text-[#D1D5DB] leading-relaxed'>
                 Curie AI shall not be liable for any indirect, incidental,
                 special, consequential, or punitive damages, including without
                 limitation, loss of profits, data, use, goodwill, or other
@@ -101,10 +101,10 @@ export default function TermsAndConditionsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-semibold text-[#0A0C10] mb-4'>
+              <h2 className='text-2xl font-semibold text-white mb-4'>
                 Service Availability
               </h2>
-              <p className='text-lg leading-relaxed'>
+              <p className='text-[#D1D5DB] leading-relaxed'>
                 We strive to maintain high service availability but do not
                 guarantee uninterrupted access. We reserve the right to modify,
                 suspend, or discontinue any part of our services with reasonable
@@ -113,10 +113,10 @@ export default function TermsAndConditionsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-semibold text-[#0A0C10] mb-4'>
+              <h2 className='text-2xl font-semibold text-white mb-4'>
                 Termination
               </h2>
-              <p className='text-lg leading-relaxed'>
+              <p className='text-[#D1D5DB] leading-relaxed'>
                 Either party may terminate this agreement at any time. Upon
                 termination, your right to use the service will cease
                 immediately, and we will delete your data in accordance with our
@@ -125,19 +125,19 @@ export default function TermsAndConditionsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-semibold text-[#0A0C10] mb-4'>
+              <h2 className='text-2xl font-semibold text-white mb-4'>
                 Contact Information
               </h2>
-              <p className='text-lg leading-relaxed'>
+              <p className='text-[#D1D5DB] leading-relaxed'>
                 If you have any questions about these Terms & Conditions, please
                 contact us:
               </p>
-              <div className='mt-4 p-4 bg-gray-50 rounded-lg'>
+              <div className='mt-4 p-4 text-[#D1D5DB] rounded-lg'>
                 <p>
-                  <strong>Email:</strong> legal@withpractice.ai
+                  <strong className='text-white'>Email:</strong> legal@withpractice.ai
                 </p>
                 <p>
-                  <strong>Address:</strong> Curie AI Legal Department
+                  <strong className='text-white'>Address:</strong> Curie AI Legal Department
                 </p>
               </div>
             </section>

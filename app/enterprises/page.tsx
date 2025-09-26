@@ -1079,7 +1079,7 @@ export default function EnterprisesPage() {
                 </div>
               </div>
 
-              <button className='w-full bg-[#799B4B] text-white py-4 rounded-lg hover:bg-[#799B4B]/90 transition-colors mt-6 font-medium'>
+              <button className='w-full cursor-pointer bg-[#799B4B] text-white py-4 rounded-lg hover:bg-[#799B4B]/90 transition-colors mt-6 font-medium'>
                 Get Detailed ROI Report
               </button>
             </div>
