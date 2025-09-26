@@ -76,7 +76,7 @@ export default function MedicalPracticesPage() {
             </div>
 
             {/* Quick Stats */}
-            <div className='flex flex-wrap justify-center items-center gap-8 text-sm text-[#ABB0BA] mb-13'>
+            <div className='flex flex-wrap justify-center items-center gap-2 md:gap-8 text-sm text-[#ABB0BA] md:mb-13'>
               <div className='flex items-center space-x-2'>
                 <Clock className='w-4 h-4' />
                 <span>2-minute setup</span>
@@ -89,78 +89,74 @@ export default function MedicalPracticesPage() {
 
             {/* EHR Integration Visual */}
             {/* AI Tools Grid */}
-            <div className='grid grid-cols-2 md:grid-cols-3 gap-[26px] mt-8 px-[150px] '>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-[26px] mt-8  sm:px-8 lg:px-[150px]'>
               {/* VISIT AI */}
-              <div className='max-h-[180px]'>
-                <img className='w-full h-full' src='/folded-div.svg' alt='' />
+              <div className='h-[160px] sm:h-[180px] flex items-center justify-center'>
+                <img className='w-full h-full object-contain' src='/folded-div.svg' alt='' />
               </div>
 
               {/* VISIT AI */}
-              <div className='bg-[#22C35D1A] max-h-[180px] rounded-[14px] p-5 text-start border border-[#22C35D33]'>
-                <div className='bg-[#22C35D33] rounded-[10px] p-3 w-fit  mb-3'>
-                  <Stethoscope className='w-6 h-6 text-[#22C35D]' />
+              <div className='bg-[#22C35D1A] min-h-[160px] sm:min-h-[180px] rounded-[14px] p-4 sm:p-5 text-start border border-[#22C35D33] flex flex-col'>
+                <div className='bg-[#22C35D33] rounded-[10px] p-2 sm:p-3 w-fit mb-3'>
+                  <Stethoscope className='w-5 h-5 sm:w-6 sm:h-6 text-[#22C35D]' />
                 </div>
                 <div className='text-[#FFFFFF] font-semibold text-sm mb-2'>
                   VISIT AI
                 </div>
-                <div className='text-[#ABB0BA] text-xs leading-relaxed'>
-                  Creates a first-of-its-kind Patient 360, indexed on the
-                  patient's chief complaint.
+                <div className='text-[#ABB0BA] text-xs leading-relaxed flex-1 line-clamp-3'>
+                  Creates a first-of-its-kind Patient 360, indexed on the patient's chief complaint.
                 </div>
               </div>
 
               {/* SCRIBE AI */}
-              <div className='bg-[#FFDD571A] max-h-[180px] rounded-[14px] p-5 text-start border border-[#FFDD5733]'>
-                <div className='bg-[#FFDD5733] rounded-[10px] p-3 w-fit  mb-3'>
-                  <FileText className='w-6 h-6 text-black' />
+              <div className='bg-[#FFDD571A] min-h-[160px] sm:min-h-[180px] rounded-[14px] p-4 sm:p-5 text-start border border-[#FFDD5733] flex flex-col'>
+                <div className='bg-[#FFDD5733] rounded-[10px] p-2 sm:p-3 w-fit mb-3'>
+                  <FileText className='w-5 h-5 sm:w-6 sm:h-6 text-black' />
                 </div>
                 <div className='text-[#FFFFFF] font-semibold text-sm mb-2'>
                   SCRIBE AI
                 </div>
-                <div className='text-[#ABB0BA] text-xs leading-relaxed'>
-                  Transcribes consultations and generates EHR-ready notes in
-                  under one minute efficiently.
+                <div className='text-[#ABB0BA] text-xs leading-relaxed flex-1 line-clamp-3'>
+                  Transcribes consultations and generates EHR-ready notes in under one minute efficiently.
                 </div>
               </div>
 
               {/* CODING AI */}
-              <div className='bg-[#22C35D1A] max-h-[180px] rounded-[14px] p-5 text-start border border-[#22C35D33]'>
-                <div className='bg-[#22C35D33] rounded-[10px] p-3 w-fit  mb-3'>
-                  <CreditCard className='w-6 h-6 text-[#A0BE41]' />
+              <div className='bg-[#22C35D1A] min-h-[160px] sm:min-h-[180px] rounded-[14px] p-4 sm:p-5 text-start border border-[#22C35D33] flex flex-col'>
+                <div className='bg-[#22C35D33] rounded-[10px] p-2 sm:p-3 w-fit mb-3'>
+                  <CreditCard className='w-5 h-5 sm:w-6 sm:h-6 text-[#A0BE41]' />
                 </div>
                 <div className='text-[#FFFFFF] font-semibold text-sm mb-2'>
                   CODING AI
                 </div>
-                <div className='text-[#ABB0BA] text-xs leading-relaxed'>
-                  Automatically generates all medical codes for compliant and
-                  accurate documentation.
+                <div className='text-[#ABB0BA] text-xs leading-relaxed flex-1 line-clamp-3'>
+                  Automatically generates all medical codes for compliant and accurate documentation.
                 </div>
               </div>
 
               {/* PAYMENTS */}
-              <div className='bg-[#22C35D1A] max-h-[180px] rounded-[14px] p-5 text-start border border-[#22C35D33]'>
-                <div className='bg-[#22C35D33] rounded-[10px] p-3 w-fit  mb-3'>
-                  <Shield className='w-6 h-6 text-[#A0BE41]' />
+              <div className='bg-[#22C35D1A] min-h-[160px] sm:min-h-[180px] rounded-[14px] p-4 sm:p-5 text-start border border-[#22C35D33] flex flex-col'>
+                <div className='bg-[#22C35D33] rounded-[10px] p-2 sm:p-3 w-fit mb-3'>
+                  <Shield className='w-5 h-5 sm:w-6 sm:h-6 text-[#A0BE41]' />
                 </div>
                 <div className='text-[#FFFFFF] font-semibold text-sm mb-2'>
                   PAYMENTS
                 </div>
-                <div className='text-[#ABB0BA] text-xs leading-relaxed'>
-                  Automates patient payments with Stripe integration for
-                  streamlined revenue collection.
+                <div className='text-[#ABB0BA] text-xs leading-relaxed flex-1 line-clamp-3'>
+                  Automates patient payments with Stripe integration for streamlined revenue collection.
                 </div>
               </div>
 
               {/* BILLING AI */}
-              <div className='bg-[#FFDD571A] max-h-[180px] rounded-[14px] p-5 text-start border  border-[#FFDD5733]'>
-                <div className='bg-[#FFDD5733] rounded-[10px] p-3 w-fit  mb-3'>
-                  <BarChart3 className='w-6 h-6 text-black' />
+              <div className='bg-[#FFDD571A] min-h-[160px] sm:min-h-[180px] rounded-[14px] p-4 sm:p-5 text-start border border-[#FFDD5733] flex flex-col'>
+                <div className='bg-[#FFDD5733] rounded-[10px] p-2 sm:p-3 w-fit mb-3'>
+                  <BarChart3 className='w-5 h-5 sm:w-6 sm:h-6 text-black' />
                 </div>
                 <div className='text-[#FFFFFF] font-semibold text-sm mb-2'>
                   BILLING AI
                 </div>
-                <div className='text-[#ABB0BA] text-xs leading-relaxed'>
-                  Generates claims suggests fixes to ensure 90%+ approval.
+                <div className='text-[#ABB0BA] text-xs leading-relaxed flex-1 line-clamp-3'>
+                  Generates claims and suggests fixes to ensure 90%+ approval.
                 </div>
               </div>
             </div>
@@ -169,7 +165,7 @@ export default function MedicalPracticesPage() {
       </section>
 
       {/* Benefits & Prior Auth AI Section */}
-      <section className='pt-20 px-6'>
+      <section className='pt-5 md:pt-20 px-6'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-14'>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -192,7 +188,7 @@ export default function MedicalPracticesPage() {
             </p>
           </div>
 
-          <div className='grid md:grid-cols-3 gap-8 mb-[154px]'>
+          <div className='grid md:grid-cols-3 gap-6 md:gap-8 mb-[154px]'>
             {/* Speed Up Authorizations */}
             <div className='text-center'>
               <div className='w-16 h-16 flex items-center justify-center mx-auto mb-6'>
@@ -247,7 +243,7 @@ export default function MedicalPracticesPage() {
       {/* Statistics Section */}
 
       {/* Case Studies Section */}
-      <section className='pb-20 px-20'>
+      <section className='pb-20 px-6 md:px-20'>
         <div className='max-w-[1440px] mx-auto'>
           <div className='grid md:grid-cols-3 gap-8'>
             {/* Case Study 1 */}
@@ -437,7 +433,7 @@ export default function MedicalPracticesPage() {
             <div className="text-center text-[#919191] md:text-white text-sm md:text-[22px] font-gilroy-medium md:font-['DM Mono'] text-normal">
               Backed By
             </div>
-            <div className='flex flex-row w-[90%] xl:w-2/5 justify-between items-center gap-4 mt-4 xl:mt-2'>
+            <div className='flex flex-row w-[90%] xl:w-[788px] justify-between items-center gap-4 mt-4 xl:mt-2'>
               <div className='w-32 h-auto md:w-[192px]'>
                 <Link href={'#'} className='contents'>
                   <img
@@ -464,7 +460,7 @@ export default function MedicalPracticesPage() {
               Supercharge your back office with state of the art AI, built for
               your practice.
             </div>
-            <div className='max-w-[838px] text-center text-[#ABB0BA] text-[20px] font-light font-dm-sans leading-[50px]'>
+            <div className='max-w-[838px] text-center text-[#ABB0BA] text-[20px] font-light font-dm-sans !leading-[32px]'>
               Curie AI leverages integrated AI features to streamline
               operations—from EHR sync, Scribe, Medical Coding, Billing to
               Payment Processing
@@ -552,14 +548,14 @@ export default function MedicalPracticesPage() {
               style={{
                 background: 'linear-gradient(90deg, #799B4B 0%, #4A6F3E 100%)',
               }}
-              className='hover:bg-[#5A7F4E] text-white !px-8 py-3 text-lg rounded-lg flex items-center shadow-[0_0_30px_rgba(74,111,62,0.6)] hover:shadow-[0_0_40px_rgba(74,111,62,0.8)] transition-all duration-300'
+              className='hover:bg-[#5A7F4E] text-white min-h-[44px] cursor-pointer !px-8 py-3 text-lg rounded-lg flex items-center '
             >
               Get Started Today
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
             <Button
               variant='outline'
-              className='border-[#799B4B33] text-white hover:bg-white hover:text-black px-8 py-3 text-lg rounded-lg transition-all duration-300 bg-transparent'
+              className='border-[#799B4B33] cursor-pointer min-h-[44px] text-white hover:bg-white hover:text-black px-8 py-3 text-lg rounded-lg transition-all duration-300 bg-transparent'
               onClick={() => {
                 // create a link and navigate to that
                 const link = document.createElement('a');

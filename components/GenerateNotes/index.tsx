@@ -25,14 +25,14 @@ export const GenerateNotes: React.FC = (): React.ReactElement => {
               <TabContent
                 subtitle={
                   <>
-                    Sync With Your EHR{' '}
+                    Sync Patient Records{' '}
                     <span className='italic font-normal text-success'>
                       Seamlessly
                     </span>
                   </>
                 }
                 paragraph='Integrate and manage patient data effortlessly, creating a reliable source of truth for your practice.'
-                btnText='Start here'
+                btnText='Sync With EHR'
                 imageSrc='/generates-code/ehr.svg'
                 onButtonClick={(): void => {
                   handleButtonClick('2');

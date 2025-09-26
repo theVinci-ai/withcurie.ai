@@ -3,33 +3,7 @@ import Link from 'next/link';
 
 export default function TermsAndConditionsPage() {
   return (
-    <div className='min-h-screen bg-white'>
-      {/* Header */}
-      <header className='bg-white border-b'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex justify-between items-center py-6'>
-            <Link href='/' className='flex items-center'>
-              <Image
-                src='/logo.svg'
-                alt='Curie AI'
-                width={38}
-                height={37}
-                className='w-8 h-8'
-              />
-              <span className='text-[#0A0C10] text-xl font-bold ml-2'>
-                Curie AI
-              </span>
-            </Link>
-            <Link
-              href='/'
-              className='text-[#0A0C10] hover:text-gray-600 font-medium'
-            >
-              Back to Home
-            </Link>
-          </div>
-        </div>
-      </header>
-
+    <div className='min-h-screen justify-center text-center bg-white'>
       {/* Main Content */}
       <main className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='prose prose-lg max-w-none'>

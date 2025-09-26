@@ -86,7 +86,7 @@ export default function Header() {
                   <div className='py-3'>
                     <Link
                       href='#'
-                      className='block px-6 py-2 text-sm text-[#FFFFFF] hover:text-white hover:bg-[#799B4B20] transition-colors'
+                      className='block px-6 py-2 text-sm text-[#FFFFFF] hover:text-white hover:rounded-sm hover:bg-[#799B4B20] transition-colors'
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       What We Do
@@ -94,14 +94,14 @@ export default function Header() {
 
                     <Link
                       href='#'
-                      className='block px-6 py-2 text-sm text-[#FFFFFF] hover:text-white hover:bg-[#799B4B20] transition-colors'
+                      className='block px-6 py-2 text-sm text-[#FFFFFF] hover:rounded-sm hover:text-white hover:bg-[#799B4B20] transition-colors'
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       FAQ
                     </Link>
                     <Link
                       href='#'
-                      className='block px-6 py-2 text-sm text-[#FFFFFF] hover:text-white hover:bg-[#799B4B20] transition-colors'
+                      className='block px-6 py-2 text-sm text-[#FFFFFF] hover:rounded-sm hover:text-white hover:bg-[#799B4B20] transition-colors'
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       Contact Us
@@ -173,7 +173,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className='xl:hidden text-white p-2 hover:text-[#799B4B] transition-colors border border-gray-600 rounded-md flex items-center justify-center'
+            className='xl:hidden text-white p-2 hover:text-[#799B4B] cursor-pointer transition-colors border border-gray-600 rounded-md flex items-center justify-center'
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label='Toggle mobile menu'
           >
@@ -330,7 +330,7 @@ export default function Header() {
               </Link>
 
               {/* Mobile CTA Buttons */}
-              <div className='pt-4 space-y-3 border-t border-gray-800'>
+              <div className='flex flex-col sm:flex-row pt-4 gap-5 border-t border-gray-800'>
                 <button
                   onClick={() => {
                     handleClick();

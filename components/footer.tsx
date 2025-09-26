@@ -98,17 +98,20 @@ export default function Footer() {
             <span>Made with AI for Healthcare</span>
           </div>
         </div>
-        <div className='overflow-hidden pt-3 lg:pt-8 '>
-          <div className='items-center w-full max-w-[1440px] mx-auto'>
-            <Image
-              src='/images/footer-logo.svg'
-              alt='Curie AI'
-              width={450}
-              height={360}
-              className='w-full -mb-6 lg:mb-0'
-            />
-          </div>
-        </div>
+  <div className="flex flex-col-reverse items-center">
+  {/* Image neeche aayegi */}
+  <div className='overflow-hidden pt-3 lg:pt-8 '>
+    <div className='items-center w-full max-w-[900px] mx-auto'>
+      <Image
+        src='/images/footer-logo3.svg'
+        alt='Curie AI'
+        width={450}
+        height={360}
+        className='w-full -mb-6 sm:-mb-11 md:-mb-17 lg:-mb-2'
+      />
+    </div>
+  </div>
+  </div>
       </div>
     </footer>
   );
