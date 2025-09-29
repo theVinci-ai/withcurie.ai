@@ -8,16 +8,17 @@ export default function Footer() {
         <div className='grid grid-cols-1 sm:grid-2 md:grid-cols-3 gap-8 justify-center '>
           {/* Company Info */}
           <div className='md:col-span-1'>
-            <Link href='/' className='flex items-center mb-6'>
-              <Image
-                src='/logo.svg'
-                alt='Curie AI'
-                width={38}
-                height={37}
-                className='w-8 h-8'
-              />
-              <span className='text-[#0A0C10] text-xl font-bold'>Curie AI</span>
-            </Link>
+          <Link href="/" className="inline-flex items-center mb-6 cursor-pointer">
+  <Image
+    src="/logo.svg"
+    alt="Curie AI"
+    width={38}
+    height={37}
+    className="w-8 h-8"
+  />
+  <span className="text-[#0A0C10] text-xl font-bold ml-2">Curie AI</span>
+</Link>
+
             <p className='text-[#0A0C10] text-sm mb-6 md:pr-30 max-w-sm leading-relaxed'>
               Transforming healthcare with AI-powered workforce solutions that
               deliver measurable outcomes for practices of all sizes.
