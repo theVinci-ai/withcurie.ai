@@ -14,9 +14,13 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
-
+import { cards } from "../utils/cards";
+import { cardDetails } from "../utils/constants";
+import { CustomButton } from "@/components/ui/custom-button";
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState("medical");
+  const [selectedCard, setSelectedCard] = useState("visit");
+
   return (
     <div className="min-h-screen bg-[#07090D] text-white overflow--hidden">
       {/* Hero Section with Background */}
@@ -32,41 +36,51 @@ export default function HomePage() {
         </div>
 
         {/* Hero Section */}
-        <main className="relative z-10 flex flex-col items-center  min-h-[40vh] px-6 text-center pt-[93px]">
+        <main className="relative z-10 flex flex-col items-center  min-h-[40vh] px-4 md:px-6 text-center pt-15 md:pt-[93px]">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance leading-[0.9]">
-              <span className="text-white">AI Workforce For</span>
-              <br />
-              <span
-                className="text-transparent"
-                style={{
-                  background:
-                    "linear-gradient(90deg, #59804C 0%, #B3D336 50%, rgba(251, 208, 81, 0.09) 100%)",
-                  backgroundClip: "text",
-                  WebkitBackgroundClip: "text",
-                }}
-              >
-                Healthcare Outcomes
-              </span>
-            </h1>
+            <div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-[1.1] break-words">
+                <span className="text-white">AI Workforce For</span>
+                <br />
+                <span
+                  className="text-transparent"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #59804C 0%, #B3D336 50%, rgba(251, 208, 81, 0.09) 100%)",
+                    backgroundClip: "text",
+                    WebkitBackgroundClip: "text",
+                  }}
+                >
+                  Healthcare Outcomes
+                </span>
+              </h1>
 
-            <p className='text-2xl md:text-xl text-gray-300 mb-18 max-w-xl mx-auto text- font-light leading-relaxed'>
-              One platform. Infinite scale. Measurable outcomes for any
-              healthcare organization.
-            </p>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-xl mx-auto font-light leading-relaxed break-words">
+                One platform. Infinite scale. Measurable outcomes for any
+                healthcare organization.
+              </p>
+            </div>
 
-            <div className='flex flex-col sm:flex-row md:gap-6 gap-4 justify-center items-center mb-23'>
-              <Button className='bg-[#4A6F3E] cursor-pointer hover:bg-[#5A7F4E] text-[#FAFAFA] !px-8 !py-3 text-lg rounded-lg flex items-center min-w-[269px] min-h-[44px] justify-center shadow-[0_0_30px_rgba(74,111,62,0.6)] hover:shadow-[0_0_40px_rgba(74,111,62,0.8)] transition-all duration-300 border border-[#4A6F3E]/50'>
-                For Medical Practices
-                <ArrowRight className="w-4 h-4 ml-" />
+            <div className="flex flex-col lg:flex-row md:gap-6 gap-4 justify-center items-center mb-23">
+              <Button className="w-full sm:w-auto bg-[#4A6F3E] cursor-pointer hover:bg-[#5A7F4E] text-[#FAFAFA] !px-8 !py-3 text-lg rounded-lg flex items-center min-h-[44px] justify-center shadow-[0_0_30px_rgba(74,111,62,0.6)] hover:shadow-[0_0_40px_rgba(74,111,62,0.8)] transition-all duration-300 border border-[#4A6F3E]/50">
+                <span className="block max-w-[150px] truncate sm:max-w-none sm:whitespace-normal">
+                  For Medical Practices
+                </span>
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
-              <Button className='bg-[#FCFCFC] cursor-pointer text-[#171D26] hover:bg-gray-100 !px-8 !py-3 text-lg rounded-lg flex items-center min-w-[291px] min-h-[44px] justify-center shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:shadow-[0_0_40px_rgba(255,255,255,0.6)] transition-all duration-300 border border-white/30'>
-                For Enterprise Practices
-                <ArrowRight className="w-4 h-4 ml-" />
+
+              <Button className="w-full sm:w-auto bg-[#FCFCFC] cursor-pointer text-[#171D26] hover:bg-gray-100 !px-8 !py-3 text-lg rounded-lg flex items-center min-h-[44px] justify-center shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:shadow-[0_0_40px_rgba(255,255,255,0.6)] transition-all duration-300 border border-white/30">
+                <span className="block max-w-[150px] truncate sm:max-w-none sm:whitespace-normal">
+                  For Enterprise Practices
+                </span>
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
-              <Button className='bg-[#B7E6FA] cursor-pointer hover:bg-[#B7E6FA]/90 text-[#171D26] !px-8 !py-3 text-lg rounded-lg flex items-center min-w-[219px] min-h-[44px] justify-center shadow-[0_0_30px_rgba(96,165,250,0.5)] hover:shadow-[0_0_40px_rgba(96,165,250,0.7)] transition-all duration-300 border border-blue-300/40'>
-                For Enterprises
-                <ArrowRight className="w-4 h-4 ml-" />
+
+              <Button className="w-full sm:w-auto bg-[#B7E6FA] cursor-pointer hover:bg-[#B7E6FA]/90 text-[#171D26] !px-8 !py-3 text-lg rounded-lg flex items-center min-h-[44px] justify-center shadow-[0_0_30px_rgba(96,165,250,0.5)] hover:shadow-[0_0_40px_rgba(96,165,250,0.7)] transition-all duration-300 border border-blue-300/40">
+                <span className="block max-w-[150px] truncate sm:max-w-none sm:whitespace-normal">
+                  For Enterprises
+                </span>
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
 
@@ -130,65 +144,65 @@ export default function HomePage() {
 
           {/* Tab Navigation */}
           <div
-            className='p-1 sm:p-2 md:w-fit mx-auto flex overflow-x-auto scrollbar-hide'
+            className="p-1 sm:p-2 md:w-fit mx-auto flex overflow-x-auto scrollbar-hide"
             style={{
-              borderRadius: '16px',
-              border: '1px solid rgba(218, 231, 224, 0.20)',
-              background: 'linear-gradient(97deg, #1B1F22 0%, #1B1F22 100%)',
-              backdropFilter: 'blur(10px)',
+              borderRadius: "16px",
+              border: "1px solid rgba(218, 231, 224, 0.20)",
+              background: "linear-gradient(97deg, #1B1F22 0%, #1B1F22 100%)",
+              backdropFilter: "blur(10px)",
             }}
           >
             <button
-              onClick={() => setActiveTab('medical')}
+              onClick={() => setActiveTab("medical")}
               className={`px-3 cursor-pointer sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl flex items-center space-x-2 sm:space-x-3 transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
-                activeTab === 'medical'
-                  ? 'bg-[#4A6F3E] text-white'
-                  : 'text-[#9096A2] hover:text-white'
+                activeTab === "medical"
+                  ? "bg-[#4A6F3E] text-white"
+                  : "text-[#9096A2] hover:text-white"
               }`}
               style={
-                activeTab === 'medical'
-                  ? { boxShadow: '0 0 32px 0 rgba(99, 233, 184, 0.30)' }
+                activeTab === "medical"
+                  ? { boxShadow: "0 0 32px 0 rgba(99, 233, 184, 0.30)" }
                   : {}
               }
             >
-              <Stethoscope className='w-4 h-4 sm:w-5 sm:h-5' />
-              <span className='font-medium text-sm sm:text-base'>
+              <Stethoscope className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="font-medium text-sm sm:text-base">
                 Medical Practices
               </span>
             </button>
             <button
-              onClick={() => setActiveTab('enterprise')}
+              onClick={() => setActiveTab("enterprise")}
               className={`px-3 cursor-pointer sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl flex items-center space-x-2 sm:space-x-3 transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
-                activeTab === 'enterprise'
-                  ? 'bg-[#4A6F3E] text-white'
-                  : 'text-[#9096A2] hover:text-white'
+                activeTab === "enterprise"
+                  ? "bg-[#4A6F3E] text-white"
+                  : "text-[#9096A2] hover:text-white"
               }`}
               style={
-                activeTab === 'enterprise'
-                  ? { boxShadow: '0 0 32px 0 rgba(99, 233, 184, 0.30)' }
+                activeTab === "enterprise"
+                  ? { boxShadow: "0 0 32px 0 rgba(99, 233, 184, 0.30)" }
                   : {}
               }
             >
-              <Building2 className='w-4 h-4 sm:w-5 sm:h-5' />
-              <span className='font-medium text-sm sm:text-base'>
+              <Building2 className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="font-medium text-sm sm:text-base">
                 Enterprise Practices
               </span>
             </button>
             <button
-              onClick={() => setActiveTab('enterprises')}
+              onClick={() => setActiveTab("enterprises")}
               className={`px-3 cursor-pointer sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl flex items-center space-x-2 sm:space-x-3 transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
-                activeTab === 'enterprises'
-                  ? 'bg-[#4A6F3E] text-white'
-                  : 'text-[#9096A2] hover:text-white'
+                activeTab === "enterprises"
+                  ? "bg-[#4A6F3E] text-white"
+                  : "text-[#9096A2] hover:text-white"
               }`}
               style={
-                activeTab === 'enterprises'
-                  ? { boxShadow: '0 0 32px 0 rgba(99, 233, 184, 0.30)' }
+                activeTab === "enterprises"
+                  ? { boxShadow: "0 0 32px 0 rgba(99, 233, 184, 0.30)" }
                   : {}
               }
             >
-              <Building className='w-4 h-4 sm:w-5 sm:h-5' />
-              <span className='font-medium text-sm sm:text-base'>
+              <Building className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="font-medium text-sm sm:text-base">
                 Enterprises
               </span>
             </button>
@@ -200,217 +214,137 @@ export default function HomePage() {
       <section className="px-6">
         <div className="max-w-[1440px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Left Side - Features */}
-            <div className="space-y-6">
-              {/* VISIT AI */}
-              <div className="border border-[#799B4B] rounded-2xl p-6 bg-[#11131780] backdrop-blur-sm">
-                <div className="flex items-start space-x-4">
-                  <img src="/visit.svg" alt="Visit AI" className="" />
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-xl font-semibold text-white">
-                        VISIT AI
-                      </h3>
-                      <span className="text-sm text-[#E6E6E6] bg-[#1B1F22] px-3 py-1 rounded-full">
-                        360° Patient View
-                      </span>
+            {/* LEFT SIDE - clickable cards */}
+            <div className="space-y-4">
+              {cards.map((card) => (
+                <button
+                  key={card.key}
+                  onClick={() => setSelectedCard(card.key)}
+                  className={`text-left p-3 md:p-6 items-start gap-4 rounded-lg cursor-pointer transition ${
+                    selectedCard === card.key
+                      ? "border border-[#799B4B] bg-[#799B4B1A] shadow-[0_0_30px_rgba(74,111,62,0.6)] transition-all duration-300 scale-102 rounded-2xl"
+                      : "bg-[#0A0C10] border border-gray-700"
+                  }`}
+                >
+                  {/* Header Row */}
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`w-10 h-10 flex items-center justify-center rounded-md text-xl text-white`}
+                    >
+                      <img
+                        src={card.icon}
+                        alt={card.title}
+                        className="w-12 h-12"
+                      />
                     </div>
-                    <p className="text-[#9096A2] text-sm leading-relaxed">
-                      Creates a first-of-its-kind Patient 360, indexed on the
-                      patient's chief complaint
-                    </p>
-                    <p className="text-[#799B4B] text-sm leading-relaxed mt-2">
-                      Comprehensive patient insights powered by AI analysis of
-                      symptoms, history, and patterns
-                    </p>
+                    <h3 className=" text-sm md:text-lg font-bold">{card.title}</h3>
+                    {card.tag && (
+                      <span className="ml-auto text-xs bg-gray-800 px-3 py-1 rounded-full">
+                        {card.tag}
+                      </span>
+                    )}
                   </div>
-                </div>
-              </div>
 
-              {/* SCRIBE AI */}
-              <div className="border border-[#21242C] rounded-2xl p-6 bg-[#11131780] backdrop-blur-sm">
-                <div className="flex items-start space-x-4">
-                  <img src="/scribe.svg" alt="" />
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-xl font-semibold text-white">
-                        SCRIBE AI
-                      </h3>
-                      <span className="text-sm text-[#E6E6E6] bg-[#1B1F22] px-3 py-1 rounded-full">
-                        {"<1 Min Processing"}
-                      </span>
-                    </div>
-                    <p className="text-[#9096A2] text-sm leading-relaxed">
-                      Transcribes consultations and generates EHR-ready notes in
-                      under one minute efficiently
+                  {/* Description + Highlight */}
+                  <div className="md:pl-13">
+                    <p className="text-sm mt-2 text-[#9096A2] line-clamp-2 ">
+                      {card.description}
                     </p>
+                    {card.highlight && (
+                      <p className="text-[#799B4B] text-sm mt-1 line-clamp-2 ">
+                        {card.highlight}
+                      </p>
+                    )}
                   </div>
-                </div>
-              </div>
-
-              {/* CODING AI */}
-              <div className="border border-[#21242C] rounded-2xl p-6 bg-[#11131780] backdrop-blur-sm">
-                <div className="flex items-start space-x-4">
-                  <img src="/coding.svg" alt="" />
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-xl font-semibold text-white">
-                        CODING AI
-                      </h3>
-                      <span className="text-sm text-[#E6E6E6] bg-[#1B1F22]  px-3 py-1 rounded-full">
-                        100% Compliant
-                      </span>
-                    </div>
-                    <p className="text-[#9096A2] text-sm leading-relaxed">
-                      Automatically generates all medical codes for compliant
-                      and accurate documentation
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* BILLING AI */}
-              <div className="border border-[#21242C] rounded-2xl p-6 bg-[#11131780] backdrop-blur-sm">
-                <div className="flex items-start space-x-4">
-                  <img src="/billing.svg" alt="" />
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-xl font-semibold text-white">
-                        BILLING AI
-                      </h3>
-                      <span className="text-sm text-[#E6E6E6] bg-[#1B1F22]  px-3 py-1 rounded-full">
-                        90%+ Approval
-                      </span>
-                    </div>
-                    <p className="text-[#9096A2] text-sm leading-relaxed">
-                      Generates claims, predicts denial likelihood, and suggests
-                      fixes to ensure 90%+ approval
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* PAYMENTS */}
-              <div className="border border-[#21242C] rounded-2xl p-6 bg-[#11131780] backdrop-blur-sm">
-                <div className="flex items-start space-x-4">
-                  <img src="/payments.svg" alt="" />
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-xl font-semibold text-white">
-                        PAYMENTS
-                      </h3>
-                      <span className="text-sm text-[#E6E6E6] bg-[#1B1F22]  px-3 py-1 rounded-full">
-                        Instant Processing
-                      </span>
-                    </div>
-                    <p className="text-[#9096A2] text-sm leading-relaxed">
-                      Automates patient payments with Stripe integration for
-                      streamlined revenue collection
-                    </p>
-                  </div>
-                </div>
-              </div>
+                </button>
+              ))}
             </div>
 
-            {/* Right Side - Code Preview */}
-            <div className="sticky lg:top-20">
-              <div className="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden">
-                {/* Code Editor Header */}
-                <div className="bg-gray-800 px-4 py-3 flex items-center justify-between border-b border-gray-700">
-                  <div className="flex items-center space-x-2">
-                    <div className="flex space-x-1">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            {/* RIGHT SIDE - dynamic details */}
+            {(() => {
+              const currentCard = cards.find((c) => c.key === selectedCard);
+              return (
+                <div className="sticky lg:top-20">
+                  <div className="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden">
+                    {/* ------------Code Editor Header----------------- */}
+                    <div className="bg-gray-800 px-4 py-3 flex items-center justify-between border-b border-gray-700">
+                      <div className="flex items-center space-x-2">
+                        <div className="flex space-x-1">
+                          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+                        <span className="text-[#9096A2] text-[9px] md:text-sm ml-4">
+                          {currentCard?.subtitle}-demo.js
+                        </span>
+                      </div>
+                      <span className="text-[#9096A2] text-[9px] text-sm">API v2.0</span>
                     </div>
-                    <span className="text-[#9096A2] text-sm ml-4">
-                      visit-ai-demo.js
-                    </span>
-                  </div>
-                  <span className="text-[#9096A2] text-sm">API v2.0</span>
-                </div>
 
-                {/* Code Content */}
-                <div className="p-6 font-mono text-sm">
-                  <div className="text-gray-500 mb-4">
-                    // VISIT AI - Patient 360 Analysis
-                  </div>
-                  <div className="text-blue-400">
-                    const <span className="text-white">patient360</span> ={" "}
-                    <span className="text-purple-400">await</span>{" "}
-                    <span className="text-yellow-400">visitAI</span>.
-                    <span className="text-blue-400">analyze</span>({"{"})
-                  </div>
-                  <div className="ml-4 text-white">
-                    patientId: <span className="text-green-400">"P-12345"</span>
-                    ,
-                  </div>
-                  <div className="ml-4 text-white">
-                    chiefComplaint:{" "}
-                    <span className="text-green-400">"chest pain"</span>,
-                  </div>
-                  <div className="ml-4 text-white">
-                    includeHistory:{" "}
-                    <span className="text-orange-400">true</span>
-                  </div>
-                  <div className="text-blue-400">{"});"}</div>
+                    {/* Code Content (Dynamic) */}
+                    <div className=" p-3 md:p-6 font-mono text-sm">
+                      <div>{selectedCard && cardDetails[selectedCard]}</div>
+                    </div>
 
-                  <div className="mt-6 text-white">
-                    patientId: <span className="text-green-400">"P-12345"</span>
-                    ,
-                  </div>
-                  <div className="text-white">
-                    chiefComplaint:{" "}
-                    <span className="text-green-400">"chest pain"</span>,
-                  </div>
-                  <div className="text-white">
-                    includeHistory:{" "}
-                    <span className="text-orange-400">true</span>
-                  </div>
-                </div>
-
-                {/* Status Bar */}
-                <div className="bg-gray-800 px-4 py-3 border-t border-gray-700 flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span className="text-green-400 text-sm">Live API</span>
+                    {/* Status Bar */}
+                    <div className="bg-gray-800 px-4 py-3 border-t border-gray-700 flex items-center justify-between">
+                      <div className="flex items-center gap-2 md:space-x-2">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span className="text-green-400 text-[9px] md:text-sm">Live API</span>
+                      </div>
+                      <div className="flex items-center gap-2 md:space-x-6 text-[9px] md:text-sm text-[#9096A2]">
+                        <span>Response: 55ms</span>
+                        <span>Uptime: 99.9%</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-6 text-sm text-[#9096A2]">
-                    <span>Response: 55ms</span>
-                    <span>Uptime: 99.9%</span>
-                  </div>
                 </div>
-              </div>
-            </div>
+              );
+            })()}
           </div>
         </div>
-        {/* CTA Button */}
-<div className="pt-8 sm:pt-12 md:pt-16 max-w-[1440px] mx-auto lg:px-4 sm:px-6 md:pl-6 text-center md:text-left">
-  <Button
-    className="bg-[#4A6F3E] cursor-pointer hover:bg-[#3d5a33] text-white 
-      px-3 py-2 sm:px-5 sm:py-2.5 md:px-8 md:py-3 
-      rounded-xl flex items-center justify-center md:justify-start 
-      text-xs sm:text-sm md:text-[13px] lg:text-[14px] 
-      h-9 sm:h-10 md:h-11"
-  >
-    <span className="truncate overflow-hidden whitespace-nowrap  max-w-[140px] sm:max-w-[180px] md:max-w-[220px] lg:max-w-[340px]">
-      Learn More About Medical Practices
-    </span>
-    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2 shrink-0" />
-  </Button>
-</div>
-
-
       </section>
-
+      <div className="md:pt-16 pt-6 pl-6 md:pl-9 ">
+        <CustomButton
+          backgroundColor="#799B4B"
+          hoverBackgroundColor="#799B4B90"
+          className="
+    bg-[#4A6F3E] cursor-pointer hover:bg-[#3d5a33] text-white
+    px-3 py-2 sm:px-5 sm:py-2.5 md:px-8 md:py-3
+    rounded-xl flex items-center justify-center md:justify-start
+    text-xs sm:text-sm md:text-[13px] lg:text-[14px]
+    h-9 sm:h-10 md:h-11 "
+          iconPosition="right"
+          width="auto"
+          icon={
+            <img
+              src="/images/arrow-icon.svg"
+              alt="Arrow"
+              className="filter brightness-0 invert 
+                 w-3 h-3 sm:w-4 sm:h-4 ml-2 shrink-0"
+              style={{
+                minWidth: "16px",
+                minHeight: "16px",
+              }}
+            />
+          }
+        >
+          <span
+            className="
+      block truncate overflow-hidden whitespace-nowrap
+      max-w-[120px] sm:max-w-[160px] md:max-w-[220px] lg:max-w-[340px]
+    "
+          >
+            Learn More About Medical Practices
+          </span>
+        </CustomButton>
+      </div>
       {/* Future of Healthcare Section */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className='text-center mb-16'>
-            <div className='text-[12px] text-[#799B4B] border border-[#799B4B33] px-3 py-1 rounded-full mb-4 w-fit mx-auto'>
+          <div className="text-center mb-16">
+            <div className="text-[12px] text-[#799B4B] border border-[#799B4B33] px-3 py-1 rounded-full mb-4 w-fit mx-auto">
               Why Choose Curie AI
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#FAFAFA] text-balance">
@@ -436,8 +370,8 @@ export default function HomePage() {
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             {/* AI-First Approach */}
-            <div className="bg-[#11131780] backdrop-blur-sm border border-[#21242C] rounded-2xl p-11">
-              <img className="mb-12" src="/approach.svg" alt="" />
+            <div className="bg-[#11131780] backdrop-blur-sm border border-[#21242C] rounded-2xl p-5 md:p-11">
+              <img className="mb-4 md:mb-12" src="/approach.svg" alt="" />
               <h3 className="text-2xl font-semibold text-[#FAFAFA] mb-4">
                 AI-First Approach
               </h3>
@@ -548,14 +482,14 @@ export default function HomePage() {
           {/* FAQ Items */}
           <div className="space-y-4">
             {/* FAQ Item 1 */}
-            <details className='group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm'>
-              <summary className='flex items-center justify-between p-6 cursor-pointer list-none'>
-                <span className='text-[#FAFAFA] text-lg font-medium'>
+            <details className="group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm">
+              <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span className="text-[#FAFAFA] text-lg font-medium">
                   How quickly can Curie AI be implemented?
                 </span>
                 <ChevronDown className="w-5 h-5 text-[#FAFAFA] group-open:rotate-180 transition-transform duration-200" />
               </summary>
-              <div className='px-6 pb-6 text-[#FAFAFA] leading-relaxed'>
+              <div className="px-6 pb-6 text-[#FAFAFA] leading-relaxed">
                 Curie AI can be deployed within 24-48 hours for most healthcare
                 organizations. Our cloud-native architecture allows for rapid
                 integration with existing EHR systems including Epic, Cerner,
@@ -566,14 +500,14 @@ export default function HomePage() {
             </details>
 
             {/* FAQ Item 2 */}
-            <details className='group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm'>
-              <summary className='flex items-center justify-between p-6 cursor-pointer list-none'>
-                <span className='text-[#FAFAFA] text-lg font-medium'>
+            <details className="group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm">
+              <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span className="text-[#FAFAFA] text-lg font-medium">
                   Is Curie AI HIPAA compliant and secure?
                 </span>
                 <ChevronDown className="w-5 h-5 text-[#FAFAFA] group-open:rotate-180 transition-transform duration-200" />
               </summary>
-              <div className='px-6 pb-6 text-[#FAFAFA] leading-relaxed'>
+              <div className="px-6 pb-6 text-[#FAFAFA] leading-relaxed">
                 Yes, Curie AI is fully HIPAA compliant and maintains SOC 2 Type
                 II certification. We employ end-to-end encryption, multi-factor
                 authentication, and regular security audits. All patient data is
@@ -584,14 +518,14 @@ export default function HomePage() {
             </details>
 
             {/* FAQ Item 3 */}
-            <details className='group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm'>
-              <summary className='flex items-center justify-between p-6 cursor-pointer list-none'>
-                <span className='text-[#FAFAFA] text-lg font-medium'>
+            <details className="group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm">
+              <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span className="text-[#FAFAFA] text-lg font-medium">
                   What EHR systems does Curie AI integrate with?
                 </span>
                 <ChevronDown className="w-5 h-5 text-[#FAFAFA] group-open:rotate-180 transition-transform duration-200" />
               </summary>
-              <div className='px-6 pb-6 text-[#FAFAFA] leading-relaxed'>
+              <div className="px-6 pb-6 text-[#FAFAFA] leading-relaxed">
                 Curie AI integrates seamlessly with all major EHR systems
                 including Epic, Cerner, Allscripts, athenahealth,
                 eClinicalWorks, and NextGen. Our API-first approach ensures
@@ -602,9 +536,9 @@ export default function HomePage() {
             </details>
 
             {/* FAQ Item 4 */}
-            <details className='group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm'>
-              <summary className='flex items-center justify-between p-6 cursor-pointer list-none'>
-                <span className='text-[#FAFAFA] text-lg font-medium'>
+            <details className="group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm">
+              <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span className="text-[#FAFAFA] text-lg font-medium">
                   How much can I expect to save with Curie AI?
                 </span>
                 <ChevronDown className="w-5 h-5 text-[#FAFAFA] group-open:rotate-180 transition-transform duration-200" />
@@ -621,14 +555,14 @@ export default function HomePage() {
             </details>
 
             {/* FAQ Item 5 */}
-            <details className='group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm'>
-              <summary className='flex items-center justify-between p-6 cursor-pointer list-none'>
-                <span className='text-[#FAFAFA] text-lg font-medium'>
+            <details className="group border border-[#21242C] rounded-xl bg-[#11131780] backdrop-blur-sm">
+              <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span className="text-[#FAFAFA] text-lg font-medium">
                   Do I need technical expertise to use Curie AI?
                 </span>
                 <ChevronDown className="w-5 h-5 text-[#FAFAFA] group-open:rotate-180 transition-transform duration-200" />
               </summary>
-              <div className='px-6 pb-6 text-[#FAFAFA] leading-relaxed'>
+              <div className="px-6 pb-6 text-[#FAFAFA] leading-relaxed">
                 No technical expertise is required. Curie AI is designed with
                 healthcare professionals in mind, featuring an intuitive
                 interface that integrates naturally into existing workflows. Our

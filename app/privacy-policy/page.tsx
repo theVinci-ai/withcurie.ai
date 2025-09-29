@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className='min-h-screen bg-[#07090D]'>
       {/* Main Content */}
-      <section className='text-center'>
+      <section className=''>
         <div className='max-w-[1000px] mx-auto px-4 py-16'>
           <h3 className='text-4xl text-white font-gilroy-semibold mb-8'>Privacy Policy</h3>
           <p className='text-[#D1D5DB]  mb-6'>Updated: March 20, 2025</p>
