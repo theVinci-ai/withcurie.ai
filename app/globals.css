@@ -366,3 +366,84 @@ header.new-sticky-bg {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* Ultra-small devices support (<= 240px) */
+@media screen and (max-width: 240px) {
+  html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  html { font-size: 14px; }
+
+  header .h-\[81px\] {
+    height: 64px !important;
+  }
+
+  header .max-w-\[1440px\] {
+    max-width: 100% !important;
+  }
+
+  header .px-4 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  header .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 6px !important;
+  }
+
+  header img.w-8 {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  header span.text-xl {
+    font-size: 0.9rem !important;
+  }
+
+  nav.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 8px !important;
+  }
+
+  .generate-notes .ant-tabs .ant-tabs-tab {
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+  }
+
+  .generate-notes .ant-tabs-nav-list {
+    gap: 4px !important;
+  }
+
+  .notes-block {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Footer compress */
+  footer .px-4 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  footer .grid {
+    gap: 12px !important;
+  }
+
+  /* Utility: ensure containers don’t force overflow */
+  .max-w-\[1440px\] {
+    max-width: 100% !important;
+  }
+
+  /* Prevent long words from overflowing */
+  body, p, span, a, h1, h2, h3, h4, h5, h6 {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* Images scale to container */
+  img, svg { max-width: 100%; height: auto; }
+
+  /* Buttons: tighter padding utility override */
+  .px-4.py-2 { padding-left: 10px !important; padding-right: 10px !important; padding-top: 6px !important; padding-bottom: 6px !important; }
+}

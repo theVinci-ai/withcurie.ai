@@ -92,7 +92,7 @@ export default function PracticeAIHome() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-bold text-white tracking-tight leading-tight">
               Less Admin, <span className="text-[#6B9550]">More Patients</span>
             </h2>
-            <p className="mt-4 text-[16px] sm:text-[18px] lg:text-[20px] text-gray-400 max-w-2xl mx-auto">
+            <p className="mt-4 text-[16px] sm:text-[18px] lg:text-[20px] text-[#ABB0BA] max-w-2xl mx-auto">
               Transform your practice efficiency with measurable outcomes
             </p>
 
@@ -101,7 +101,7 @@ export default function PracticeAIHome() {
                 const Icon = benefit.icon;
                 return (
                   <div key={index} className="flex flex-col items-center px-2">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center bg-[#0E3C23]">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-[10px] flex items-center justify-center bg-[#0E3C23]">
                       {benefit.image ? (
                         <img  src={benefit.image} alt={benefit.label} className="w-6 h-6 sm:w-8 sm:h-8 text-[#A0BE41]" />
                       ) : Icon ? (
@@ -117,21 +117,21 @@ export default function PracticeAIHome() {
           </section>
 
           {/* Section 3: Testimonials */}
-          <section className="py-8 sm:py-12 px-4">
+          <section className="py-8 sm:py-12 sm:px-4">
             <div className="text-center">
-               <p className="text-xs sm:text-sm text-[#799B4B] border border-[#799B4B33] w-fit mx-auto px-3 py-2 rounded-full font-semibold tracking-wider">Trusted by Practitioners</p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mt-4 tracking-tight leading-tight">
+               <p className="text-[8px] sm:text-xs text-[#799B4B] border border-[#799B4B33] w-fit mx-auto px-3 py-2 rounded-full font-semibold tracking-wider">Trusted by Practitioners</p>
+              <h2 className="text-2xl sm:text-[45px]  font-bold text-white mt-4 tracking-tight leading-tight">
                 The Healthcare Community's<br className="hidden sm:block" />
                 <span className="sm:inline block"> </span><span style={{background: 'linear-gradient(90deg, #779B48 0%, #9BB942 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text'}} className="text-transparent">Response to Practice AI</span>
               </h2>
-              <p className="mt-4 text-[14px] sm:text-[16px] lg:text-lg text-gray-400 max-w-3xl mx-auto px-4">
-                Real practitioners sharing their experience with AI-powered healthcare workflows
+              <p className="mt-4 text-[14px] sm:text-[16px] lg:text-lg text-[#ABB0BA] max-w-3xl mx-auto px-4">
+                Real practitioners sharing their experience with AI-powered healthcare <br></br> workflows
               </p>
             </div>
 
             <div className="mt-8 sm:mt-12 lg:mt-16 max-w-4xl mx-auto">
               {/* Main Testimonial Card */}
-              <div style={{boxShadow: ' 0 0 40px 0 rgba(121, 155, 75, 0.20)'}} className="bg-[#11131780] backdrop-blur-sm py-8 px-6 sm:py-12 sm:px-12 lg:py-[65px] lg:px-[90px] rounded-xl sm:rounded-2xl border border-white/10 shadow-2xl relative max-w-[896px] flex flex-col items-center justify-center mx-4 sm:mx-0">
+              <div style={{boxShadow: ' 0 0 40px 0 rgba(121, 155, 75, 0.20)'}} className="bg-[#11131780] backdrop-blur-sm py-8  sm:py-12 sm:px-12 lg:py-[65px] lg:px-[90px] rounded-xl sm:rounded-2xl border border-white/10 shadow-2xl relative max-w-[896px] flex flex-col items-center justify-center sm:mx-0">
                 <div className="flex items-center justify-center flex-col ">
                 <Quote className="text-[#FAFAFA] w-6 h-6 sm:w-8 sm:h-8" />
                 <p className="text-[16px] sm:text-[18px] lg:text-2xl text-center text-[#FAFAFA] font-medium max-w-2xl mx-auto mt-6 sm:mt-8 lg:mt-12 leading-relaxed">
@@ -139,9 +139,9 @@ export default function PracticeAIHome() {
                 </p>
                 </div>
 
-                <div className="flex flex-col lg:flex-row items-center justify-between pt-6 sm:pt-8 lg:pt-[35px] gap-4 sm:gap-6 lg:gap-10 w-full">
+                <div className="flex flex-col  lg:flex-row items-center justify-between pt-6 sm:pt-8 lg:pt-[35px] gap-4 sm:gap-6 lg:gap-6 ">
                   <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 lg:border-r lg:border-[#21242C] lg:pr-12">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#799B4B] text-white flex items-center justify-center font-bold text-sm sm:text-lg flex-shrink-0">
+                    <div className="w-10 h-10 sm:w-15 sm:h-15 rounded-[10px] bg-[#799B4B] text-white flex items-center justify-center font-bold text-sm sm:text-lg flex-shrink-0">
                       {activeTestimonial.initials}
                     </div>
                     <div className="text-center lg:text-left">
@@ -172,7 +172,7 @@ export default function PracticeAIHome() {
               </div>
 
               {/* Thumbnail Selectors */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-8 sm:mt-10 lg:mt-12 px-4 sm:px-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-8 sm:mt-10 lg:mt-12  sm:px-4">
                   {testimonials.map((testimonial, index) => (
                       <div
                           key={index}
@@ -188,7 +188,7 @@ export default function PracticeAIHome() {
                           aria-pressed={activeIndex === index}
                       >
                           <div className="flex flex-col items-center">
-                             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#4A6F3E] text-white flex items-center justify-center font-bold text-xs sm:text-sm mb-2 sm:mb-3">
+                             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-[10px] bg-[linear-gradient(135deg,#799B4B_0%,#4A6F3E_100%)] text-white flex items-center justify-center font-bold text-xs sm:text-sm mb-2 sm:mb-3">
                                   {testimonial.initials}
                              </div>
                              <p className="font-semibold text-white text-xs sm:text-sm mb-1">{testimonial.name}</p>

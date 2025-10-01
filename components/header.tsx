@@ -157,7 +157,7 @@ export default function Header() {
             onClick={handleClick}
           >
             <div className=' h-9 bg-zinc-950 hover:bg-[#3d5a33] px-3 py-2 rounded-[10px] border border-[#799B4B33] flex items-center justify-center'>
-              <span className='text-neutral-50 text-sm font-medium leading-tight'>
+              <span className='text-neutral-50 transition-colors duration-500 bg-transparent text-sm font-medium leading-tight'>
                 Feature Demo
               </span>
             </div>
@@ -165,7 +165,7 @@ export default function Header() {
               href={ownerDetail.calendlyLink}
               target='_blank'
               rel='noopener noreferrer'
-              className='bg-[#4A6F3E] cursor-pointer text-white px-4 py-2 rounded-[10px] text-sm font-medium hover:bg-[#3d5a33] transition-colors'
+              className='bg-[#4A6F3E]  duration-500  cursor-pointer text-white px-4 py-2 rounded-[10px] text-sm font-medium hover:bg-[#3d5a33] transition-colors'
             >
               See Demo
             </Link>
@@ -336,7 +336,7 @@ export default function Header() {
                     handleClick();
                     setIsMobileMenuOpen(false);
                   }}
-                  className='w-full h-9 bg-zinc-950 hover:bg-[#3d5a33] px-3 py-2 rounded-[10px] border border-[#799B4B33] flex items-center justify-center transition-colors'
+                  className='w-full h-9 bg-zinc-950  duration-500  hover:bg-[#3d5a33] px-3 py-2 rounded-[10px] border border-[#799B4B33] flex items-center justify-center transition-colors'
                 >
                   <span className='text-neutral-50 text-sm font-medium leading-tight'>
                     Feature Demo
@@ -346,7 +346,7 @@ export default function Header() {
                   href={ownerDetail.calendlyLink}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='block w-full bg-[#4A6F3E] text-white px-4 py-2 rounded-[10px] text-sm font-medium hover:bg-[#3d5a33] transition-colors text-center'
+                  className='block w-full bg-[#4A6F3E] duration-500  text-white px-4 py-2 rounded-[10px] text-sm font-medium hover:bg-[#3d5a33] transition-colors text-center'
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   See Demo
