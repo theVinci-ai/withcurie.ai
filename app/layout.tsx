@@ -6,6 +6,7 @@ import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Suspense } from 'react';
+import type { Viewport } from 'next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,6 +18,12 @@ export const metadata: Metadata = {
   description:
     'Transforming healthcare with AI-powered workforce solutions that deliver measurable outcomes for practices of all sizes.',
   generator: 'Mr Afaq',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
 };
 
 export default function RootLayout({
