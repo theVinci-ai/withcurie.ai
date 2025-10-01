@@ -68,7 +68,7 @@ visit: (
     <div className="text-blue-400">{"});"}</div>
 
     {/* Plain code version */}
-    <div className="mt-4 pl-4  text-sm text-white">
+    <div className="mt-4 md:pl-4  text-sm text-white">
       patientId: "P-12345", <br />
       chiefComplaint: "chest pain", <br />
       includeHistory: true
@@ -100,12 +100,14 @@ visit: (
           "recorded audio"{" "}
         </span>{" "}
       </div>{" "}
+      <div className="ml-4 text-white"> encounterId: <span className="text-green-400">"E-56789"</span> </div>
       <div className="text-blue-400">{"});"}</div>{" "}
-      <div className="mt-4 pl-4 text-sm text-white">
+      <div className="mt-4 md:pl-4 text-sm text-white">
   encounterId: "E-56789", <br />
-  transcript: "Patient reports mild headache for 3 days.", <br />
-  providerNotes: "Recommend hydration and rest."
+  transcript: "Mild headache for 3 days.", <br />
+  providerNotes: "Advise hydration & rest."
 </div>
+
     </>
   ),
   coding: (
@@ -133,8 +135,9 @@ visit: (
         {" "}
         compliant: <span className="text-orange-400">true</span>{" "}
       </div>{" "}
+      <div className="ml-4 text-white"> icd10: <span className="text-green-400">["R51.9", "I10"]</span> </div>
       <div className="text-blue-400">{"});"}</div>{" "}
-      <div className="mt-4 pl-4 text-sm text-white">
+      <div className="mt-4 md:pl-4 text-sm text-white">
   icd10: ["R51.9", "I10"], <br />
   cpt: ["99213"], <br />
   modifiers: ["25"]
@@ -163,8 +166,9 @@ visit: (
         {" "}
         predictedApproval: <span className="text-green-400">"92%"</span>{" "}
       </div>{" "}
+      <div className="ml-4 text-white"> insuranceProvider: <span className="text-green-400">"Blue Cross"</span> </div>
       <div className="text-blue-400">{"});"}</div>{" "}
-      <div className="mt-4 pl-4 text-sm text-white">
+      <div className="mt-4 md:pl-4 text-sm text-white">
   claimId: "C-98765", <br />
   insuranceProvider: "Blue Cross", <br />
   status: "Pending"
@@ -193,8 +197,9 @@ visit: (
         {" "}
         amount: <span className="text-green-400">"$250"</span>{" "}
       </div>{" "}
+      <div className="ml-4 text-white"> method: <span className="text-green-400">"Credit Card"</span> </div>
       <div className="text-blue-400">{"});"}</div>{" "}
-      <div className="mt-4 pl-4 text-sm text-white">
+      <div className="mt-4 md:pl-4 text-sm text-white">
   paymentId: "PMT-4567", <br />
   amount: 200.0, <br />
   method: "Credit Card"
@@ -202,3 +207,32 @@ visit: (
     </>
   ),
 };
+
+// faq-------------------
+export const faqs = [
+  {
+    question: "How quickly can Curie AI be implemented?",
+    answer:
+      "Curie AI can be deployed within 24-48 hours for most healthcare organizations. Our cloud-native architecture allows for rapid integration with existing EHR systems including Epic, Cerner, and Allscripts. The implementation process includes data migration, staff training, and workflow optimization to ensure seamless adoption across your practice.",
+  },
+  {
+    question: "Is Curie AI HIPAA compliant and secure?",
+    answer:
+      "Yes, Curie AI is fully HIPAA compliant and maintains SOC 2 Type II certification. We employ end-to-end encryption, multi-factor authentication, and regular security audits. All patient data is processed and stored in secure, HIPAA-compliant cloud infrastructure with 99.9% uptime guarantee and comprehensive backup systems.",
+  },
+  {
+    question: "What EHR systems does Curie AI integrate with?",
+    answer:
+      "Curie AI integrates seamlessly with all major EHR systems including Epic, Cerner, Allscripts, athenahealth, eClinicalWorks, and NextGen. Our API-first approach ensures compatibility with custom and legacy systems. We also support HL7 FHIR standards for interoperability and can work with practice management systems like Kareo and DrChrono.",
+  },
+  {
+    question: "How much can I expect to save with Curie AI?",
+    answer:
+      "Healthcare organizations typically see 30-50% reduction in administrative costs and 25% increase in revenue within the first 6 months. Our AI workforce eliminates the need for additional administrative staff, reduces claim denials by 90%, and increases patient throughput by optimizing scheduling and documentation workflows. ROI is typically achieved within 3-4 months.",
+  },
+  {
+    question: "Do I need technical expertise to use Curie AI?",
+    answer:
+      "No technical expertise is required. Curie AI is designed with healthcare professionals in mind, featuring an intuitive interface that integrates naturally into existing workflows. Our comprehensive training program includes hands-on sessions, video tutorials, and ongoing support. Most staff members become proficient within 2-3 days of training.",
+  },
+];

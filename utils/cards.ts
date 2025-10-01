@@ -32,7 +32,7 @@ export const cards = [
        subtitle:"billing-ai",
     description:
       "Automates patient payments with Stripe integration for streamlined revenue collection",
-    tag: "Instant Processing",
+    tag: "90%+ Approval",
     icon: "/billing.svg",
   },
   {
