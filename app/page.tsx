@@ -158,7 +158,7 @@ export default function HomePage() {
               <div className="flex flex-wrap  justify-center items-center  gap-4 sm:gap-8">
                 <div className="flex items-center space-x-3 min-w-[136px] sm:min-w-[0px]">
                   <img
-                    src="/Hippa.svg"
+                    src="/Hippa-icon.svg"
                     alt="HIPAA Compliant"
                     className="w-8 h-8 sm:w-12 sm:h-12"
                   />
@@ -170,7 +170,7 @@ export default function HomePage() {
 
                 <div className="flex items-center space-x-3 min-w-[136px] sm:min-w-[0px]">
                   <img
-                    src="/Soc.svg"
+                    src="/Soc-icon.svg"
                     alt="SOC 2 Type II"
                     className="w-8 h-8 sm:w-12 sm:h-12"
                   />
@@ -182,7 +182,7 @@ export default function HomePage() {
 
                 <div className="flex items-center space-x-3 min-w-[136px] sm:min-w-[0px]">
                   <img
-                    src="/Google.svg"
+                    src="/Google-icon.svg"
                     alt="Google for Startups"
                     className="w-8 h-8 sm:w-12 sm:h-12"
                   />
@@ -608,7 +608,7 @@ export default function HomePage() {
                 <div className="flex flex-wrap  justify-center items-center  gap-4 sm:gap-8">
                   <div className="flex items-center space-x-3 min-w-[136px] sm:min-w-[0px]">
                     <img
-                      src="/Hippa.svg"
+                      src="/Hippa-icon.svg"
                       alt="HIPAA Compliant"
                       className="w-8 h-8 sm:w-12 sm:h-12"
                     />
@@ -620,7 +620,7 @@ export default function HomePage() {
 
                   <div className="flex items-center space-x-3 min-w-[136px] sm:min-w-[0px]">
                     <img
-                      src="/Soc.svg"
+                      src="/Soc-icon.svg"
                       alt="SOC 2 Type II"
                       className="w-8 h-8 sm:w-12 sm:h-12"
                     />
@@ -632,7 +632,7 @@ export default function HomePage() {
 
                   <div className="flex items-center space-x-3 min-w-[136px] sm:min-w-[0px]">
                     <img
-                      src="/Google.svg"
+                      src="/Google-icon.svg"
                       alt="Google for Startups"
                       className="w-8 h-8 sm:w-12 sm:h-12"
                     />
@@ -799,7 +799,7 @@ export default function HomePage() {
               <div className="flex flex-wrap  justify-center items-center  gap-4 sm:gap-8">
                 <div className="flex items-center gap-[6px] min-w-[136px] sm:min-w-[0px]">
                   <img
-                    src="/Hippa-short.svg"
+                    src="/Hippa-small-icon.svg"
                     alt="HIPAA Compliant"
                     className="w-[22px] h-[22px] "
                   />
@@ -811,7 +811,7 @@ export default function HomePage() {
 
                 <div className="flex items-center gap-[6px] min-w-[136px] sm:min-w-[0px]">
                   <img
-                    src="/Soc-short.svg"
+                    src="/Soc-small-icon.svg"
                     alt="SOC 2 Type II"
                     className="w-[22px] h-[22px] "
                   />
@@ -823,7 +823,7 @@ export default function HomePage() {
 
                 <div className="flex items-center gap-[6px] min-w-[136px] sm:min-w-[0px]">
                   <img
-                    src="/Google-short.svg"
+                    src="/Google-small-icon.svg"
                     alt="Google for Startups"
                     className="w-[22px] h-[22px] "
                   />
