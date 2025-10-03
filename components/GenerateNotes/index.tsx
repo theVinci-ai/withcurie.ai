@@ -17,9 +17,9 @@ export const GenerateNotes: React.FC = (): React.ReactElement => {
       id='generic-notes'
       className='generate-notes bg-[#F7F7F7]  relative overflow-hidden '
     >
-      <div className='bg-white  h-full w-full absolute left-1/2 hidden lg:block '></div>
-      <div className='max-w-screen-xl mx-auto px-4 lg:py-10'>
-        <div className='pt-12 pb-6 md:pt-16 md:pb-6'>
+      <div className='bg-white  h-full w-full absolute left-1/2 hidden lg:block  '></div>
+      <div className='max-w-screen-xl mx-auto px-4 lg:py-10 '>
+        <div className='pt-7 pb-6 md:pt-16 md:pb-6'>
           <Tabs activeKey={selectedTab} onChange={setSelectedTab}>
             <TabPane tab='EHR' key='1'>
               <TabContent
