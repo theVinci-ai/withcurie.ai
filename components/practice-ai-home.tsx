@@ -68,31 +68,31 @@ export default function PracticeAIHome() {
     <div className="text-gray-300 font-sans antialiased">
       <div className="relative isolate overflow-hidden">
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-6 sm:py-12">
           {/* Section 1: Hero Stats */}
           <section className="max-w-[830px] mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 bg-[#11131780] backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-[16px] sm:rounded-[24px] border border-[#21242C] shadow-lg">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-8 bg-[#11131780] backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-[16px] sm:rounded-[24px] border border-[#21242C] shadow-lg">
                   <div className="text-center md:border-r-2 md:border-[#21242C] py-2 sm:py-0">
-                    <p style={{background: 'linear-gradient(90deg, #81A348 0%, #ABCB38 100%);'}} className="text-3xl sm:text-4xl lg:text-5xl xl:text-[55px] font-bold text-[#81A348]">60%</p>
-                    <p className="text-[#9096A2] mt-2 text-[16px] sm:text-[18px] lg:text-[21px]">Revenue Increase</p>
+                    <p style={{background: 'linear-gradient(90deg, #81A348 0%, #ABCB38 100%);'}} className="text-2xl sm:text-4xl lg:text-5xl xl:text-[55px] font-bold text-[#81A348]">60%</p>
+                    <p className="text-[#9096A2] mt-2 text-[12px] sm:text-[18px] lg:text-[21px]">Revenue Increase</p>
                   </div>
                   <div className="text-center md:border-r-2 md:border-[#21242C] py-2 sm:py-0">
-                    <p style={{background: 'linear-gradient(90deg, #81A348 0%, #ABCB38 100%);'}} className="text-3xl sm:text-4xl lg:text-5xl xl:text-[55px] font-bold text-[#81A348]">2 Min</p>
-                    <p className="text-[#9096A2] mt-2 text-[16px] sm:text-[18px] lg:text-[21px]">Claim Submission</p>
+                    <p style={{background: 'linear-gradient(90deg, #81A348 0%, #ABCB38 100%);'}} className="text-2xl sm:text-4xl lg:text-5xl xl:text-[55px] font-bold text-[#81A348]">2 Min</p>
+                    <p className="text-[#9096A2] mt-2 text-[12px] sm:text-[18px] lg:text-[21px]">Claim Submission</p>
                   </div>
                   <div className="text-center py-2 sm:py-0">
-                    <p style={{background: 'linear-gradient(90deg, #81A348 0%, #ABCB38 100%);'}} className="text-3xl sm:text-4xl lg:text-5xl xl:text-[55px] font-bold text-[#81A348]">90%+</p>
-                    <p className="text-[#9096A2] mt-2 text-[16px] sm:text-[18px] lg:text-[21px]">Approval Rate</p>
+                    <p style={{background: 'linear-gradient(90deg, #81A348 0%, #ABCB38 100%);'}} className="text-2xl sm:text-4xl lg:text-5xl xl:text-[55px] font-bold text-[#81A348]">90%+</p>
+                    <p className="text-[#9096A2] mt-2 text-[12px] sm:text-[18px] lg:text-[21px]">Approval Rate</p>
                   </div>
                 </div>
           </section>
 
           {/* Section 2: Value Proposition */}
-          <section className="py-12 sm:py-16 lg:py-24 text-center px-4">
+          <section className=" pt-5 sm:py-16 lg:py-24 text-center px-4">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-bold text-white tracking-tight leading-tight">
               Less Admin, <span className="text-[#6B9550]">More Patients</span>
             </h2>
-            <p className="mt-4 text-[16px] sm:text-[18px] lg:text-[20px] text-[#ABB0BA] max-w-2xl mx-auto">
+            <p className="mt-4 text-[12px] sm:text-[18px] lg:text-[20px] text-[#ABB0BA] max-w-2xl mx-auto">
               Transform your practice efficiency with measurable outcomes
             </p>
 
@@ -101,15 +101,15 @@ export default function PracticeAIHome() {
                 const Icon = benefit.icon;
                 return (
                   <div key={index} className="flex flex-col items-center px-2">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-[10px] flex items-center justify-center bg-[#0E3C23]">
+                    <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-[10px] flex items-center justify-center bg-[#0E3C23]">
                       {benefit.image ? (
-                        <img  src={benefit.image} alt={benefit.label} className="w-6 h-6 sm:w-8 sm:h-8 text-[#A0BE41]" />
+                        <img  src={benefit.image} alt={benefit.label} className="w-5 h-5 sm:w-8 sm:h-8 text-[#A0BE41]" />
                       ) : Icon ? (
                         <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-[#A0BE41]" />
                       ) : null}
                     </div>
-                    <p className="text-[20px] sm:text-[24px] lg:text-[32px] xl:text-[40px] font-bold text-[#526C42] mt-3 sm:mt-4">{benefit.value}</p>
-                    <p className="text-[#94A6B8] text-[12px] sm:text-[14px] lg:text-[16px] mt-1 text-balance text-center">{benefit.label}</p>
+                    <p className="text-[24px] sm:text-[24px] lg:text-[32px] xl:text-[40px] font-bold text-[#526C42] mt-3 sm:mt-4">{benefit.value}</p>
+                    <p className="text-[#94A6B8] text-[10px] sm:text-[14px] lg:text-[16px] mt-1 text-balance text-center">{benefit.label}</p>
                   </div>
                 );
               })}
@@ -117,9 +117,9 @@ export default function PracticeAIHome() {
           </section>
 
           {/* Section 3: Testimonials */}
-          <section className="py-8 sm:py-12 sm:px-4">
+          <section className="  sm:py-12 sm:px-4">
             <div className="text-center">
-               <p className="text-[8px] sm:text-xs text-[#799B4B] border border-[#799B4B33] w-fit mx-auto px-3 py-2 rounded-full font-semibold tracking-wider">Trusted by Practitioners</p>
+               <p className="text-[8px] sm:text-xs text-[#799B4B] border sm:min-w-[162px] min-h-[29px] border-[#799B4B33] w-fit mx-auto px-3 py-2 rounded-full font-semibold tracking-wider">Trusted by Practitioners</p>
               <h2 className="text-2xl sm:text-[45px]  font-bold text-white mt-4 tracking-tight leading-tight">
                 The Healthcare Community's<br className="hidden sm:block" />
                 <span className="sm:inline block"> </span><span style={{background: 'linear-gradient(90deg, #779B48 0%, #9BB942 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text'}} className="text-transparent">Response to Practice AI</span>
@@ -129,12 +129,12 @@ export default function PracticeAIHome() {
               </p>
             </div>
 
-            <div className="mt-8 sm:mt-12 lg:mt-16 max-w-4xl mx-auto">
+            <div className="mt-8 sm:mt-12 lg:mt-16  max-w-4xl mx-auto">
               {/* Main Testimonial Card */}
-              <div style={{boxShadow: ' 0 0 40px 0 rgba(121, 155, 75, 0.20)'}} className="bg-[#11131780] backdrop-blur-sm py-8  sm:py-12 sm:px-12 lg:py-[65px] lg:px-[90px] rounded-xl sm:rounded-2xl border border-white/10 shadow-2xl relative max-w-[896px] flex flex-col items-center justify-center sm:mx-0">
-                <div className="flex items-center justify-center flex-col ">
+              <div style={{boxShadow: ' 0 0 40px 0 rgba(121, 155, 75, 0.20)'}} className="bg-[#11131780] backdrop-blur-sm py-8  sm:py-12 sm:px-12 lg:py-[65px] px-3 lg:px-[90px] rounded-xl sm:rounded-2xl border border-white/10 shadow-2xl relative max-w-[896px] flex flex-col items-center justify-center sm:mx-0">
+                <div className="flex items-center justify-center flex-col  ">
                 <Quote className="text-[#FAFAFA] w-6 h-6 sm:w-8 sm:h-8" />
-                <p className="text-[16px] sm:text-[18px] lg:text-2xl text-center text-[#FAFAFA] font-medium max-w-2xl mx-auto mt-6 sm:mt-8 lg:mt-12 leading-relaxed">
+                <p className="text-[12px] sm:text-[18px] leading-7 lg:text-2xl text-center text-[#FAFAFA] font-medium max-w-2xl mx-auto mt-6 sm:mt-8 lg:mt-12 ">
                   "{activeTestimonial.quote}"
                 </p>
                 </div>
@@ -144,15 +144,15 @@ export default function PracticeAIHome() {
                     <div className="w-10 h-10 sm:w-15 sm:h-15 rounded-[10px] bg-[#799B4B] text-white flex items-center justify-center font-bold text-sm sm:text-lg flex-shrink-0">
                       {activeTestimonial.initials}
                     </div>
-                    <div className="text-center lg:text-left">
-                      <p className="font-bold text-white text-sm sm:text-base">{activeTestimonial.name}</p>
-                      <p className="text-[14px] sm:text-[16px] text-[#9096A2]">{activeTestimonial.title}</p>
-                       {activeTestimonial.subtitle && <p className="text-[10px] sm:text-xs text-white">{activeTestimonial.subtitle}</p>}
+                    <div className="text-center lg:text-left leading-4 sm:leading-6">
+                      <p className="font-bold text-white text-left sm:text-left text-[12px] sm:text-base">{activeTestimonial.name}</p>
+                      <p className="text-[12px] text-left sm:text-left sm:text-[16px] text-[#9096A2]">{activeTestimonial.title}</p>
+                       {activeTestimonial.subtitle && <p className="text-[10px] sm:text-xs text-[#E6E6E6]">{activeTestimonial.subtitle}</p>}
                     </div>
                   </div>
-                  <div className="text-center lg:text-right">
-                      <p className="text-lg sm:text-xl font-bold text-[#799B4B]">{activeTestimonial.metric}</p>
-                      {activeTestimonial.improvement && <p className="text-xs sm:text-sm text-center lg:text-right text-[#9096A2]">{activeTestimonial.improvement}</p>}
+                  <div className="text-center lg:text-right ">
+                      <p className="text-sm sm:text-xl font-bold leading-5 sm:leading-7 text-[#799B4B]">{activeTestimonial.metric}</p>
+                      {activeTestimonial.improvement && <p className="text-xs sm:text-sm text-center  text-[#9096A2]">{activeTestimonial.improvement}</p>}
                   </div>
                 </div>
               </div>
@@ -188,11 +188,11 @@ export default function PracticeAIHome() {
                           aria-pressed={activeIndex === index}
                       >
                           <div className="flex flex-col items-center">
-                             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-[10px] bg-[linear-gradient(135deg,#799B4B_0%,#4A6F3E_100%)] text-white flex items-center justify-center font-bold text-xs sm:text-sm mb-2 sm:mb-3">
+                             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-[10px] bg-[linear-gradient(135deg,#799B4B_0%,#4A6F3E_100%)] text-white flex items-center justify-center font-bold text-xs sm:text-sm mb-1 sm:mb-3">
                                   {testimonial.initials}
                              </div>
                              <p className="font-semibold text-white text-xs sm:text-sm mb-1">{testimonial.name}</p>
-                             <p className="text-[10px] sm:text-xs text-gray-400 mb-3 sm:mb-4">{testimonial.title}</p>
+                             <p className="text-[10px] sm:text-xs text-gray-400 mb-1 sm:mb-4">{testimonial.title}</p>
                              <p className="text-xs sm:text-sm font-bold text-[#799B4B]">{testimonial.metric}</p>
                           </div>
                       </div>
