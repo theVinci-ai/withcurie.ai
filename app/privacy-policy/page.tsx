@@ -4,13 +4,13 @@ import Link from 'next/link';
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className='min-h-screen bg-[#07090D]'>
+    <div className='min-h-screen bg-[#07090D] overflow-x-hidden'>
       {/* Main Content */}
       <section className=''>
-        <div className='max-w-[1000px] mx-auto px-4 py-16'>
-          <h3 className='text-4xl text-white font-gilroy-semibold mb-8'>Privacy Policy</h3>
-          <p className='text-[#D1D5DB]  mb-6'>Updated: March 20, 2025</p>
-          <h3 className='text-2xl text-white font-semibold mb-6'>
+        <div className='max-w-[1000px] justify-center items-center text-center sm:text-start mx-auto px-3 sm:px-4 py-8 sm:py-16 break-words'>
+          <h3 className='text-2xl sm:text-4xl text-white font-gilroy-semibold mb-4 sm:mb-8'>Privacy Policy</h3>
+          <p className='text-[#D1D5DB]  mb-4 sm:mb-6'>Updated: March 20, 2025</p>
+          <h3 className='text-xl sm:text-2xl text-white font-semibold mb-4 sm:mb-6'>
             Our Commitment to Your Privacy
           </h3>
           <p className='mb-6 text-[#D1D5DB]'>
@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
           <p className='mb-6 font-semibold text-white'>
             This policy covers personal information collected through:
           </p>
-          <ul className='mb-6  text-[#D1D5DB]'>
+          <ul className='mb-6  text-[#D1D5DB] break-words'>
             <li>Our website at https://withpractice.ai/</li>
             <li>Our AI powered practice management agent product</li>
             <li>Our AI powered physician agent product</li>
