@@ -27,14 +27,9 @@ export default function EnterprisePracticesPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      {/* Hero Section */}
-      <section className="relative  flex items-center justify-center px-6 pt-24 min-h-[100vh] overflow-hidden">
+      <section className="relative flex items-center justify-center px-4 sm:px-6 pt-16 sm:pt-20 lg:pt-24 min-h-screen overflow-hidden">
   {/* Dark background with subtle patterns */}
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: "rgba(7, 9, 13, 0.2)" }}
-        >
-          {/* Background image with 30% opacity */}
+  <div className="absolute inset-0">
     <div
       className="absolute inset-0 opacity-30"
       style={{
@@ -44,7 +39,6 @@ export default function EnterprisePracticesPage() {
         backgroundRepeat: "no-repeat",
       }}
     ></div>
-          {/* Subtle grid pattern */}
     <div
       className="absolute inset-0 opacity-[0.02]"
       style={{
@@ -54,27 +48,22 @@ export default function EnterprisePracticesPage() {
     ></div>
   </div>
 
-        {/* Green glow effects */}
+  {/* Glow effects */}
   <div className="absolute inset-0 overflow-hidden">
-          {/* Main central glow */}
     <div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full blur-3xl"
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] sm:w-[600px] sm:h-[450px] lg:w-[800px] lg:h-[600px] rounded-full blur-3xl"
       style={{
         background:
           "radial-gradient(circle, rgba(34,197,94,0.1) 0%, rgba(34,197,94,0.05) 40%, transparent 70%)",
       }}
     ></div>
-
-          {/* Top right accent */}
     <div
-            className="absolute top-20 right-20 w-80 h-80 rounded-full blur-2xl"
+      className="absolute top-10 sm:top-20 right-10 sm:right-20 w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 rounded-full blur-2xl"
       style={{
         background:
           "radial-gradient(circle, rgba(74,222,128,0.08) 0%, transparent 70%)",
       }}
     ></div>
-
-          {/* Bottom left accent */}
     <div
       className="absolute bottom-20 sm:bottom-32 left-10 sm:left-20 w-32 h-32 sm:w-48 sm:h-48 lg:w-60 lg:h-60 rounded-full blur-xl"
       style={{
