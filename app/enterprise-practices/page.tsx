@@ -27,236 +27,172 @@ export default function EnterprisePracticesPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      {/* Hero Section */}
-      <section className="relative  flex items-center justify-center px-6 pt-24 min-h-[100vh] overflow-hidden">
-        {/* Dark background with subtle patterns */}
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: "rgba(7, 9, 13, 0.2)" }}
+      <section className="relative flex items-center justify-center px-4 sm:px-6 pt-16 sm:pt-20 lg:pt-24 min-h-screen overflow-hidden">
+  {/* Dark background with subtle patterns */}
+  <div className="absolute inset-0">
+    <div
+      className="absolute inset-0 opacity-30"
+      style={{
+        backgroundImage: `url('/images/ai-healthcare-bg.svg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    ></div>
+    <div
+      className="absolute inset-0 opacity-[0.02]"
+      style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+        backgroundSize: "50px 50px",
+      }}
+    ></div>
+  </div>
+
+  {/* Glow effects */}
+  <div className="absolute inset-0 overflow-hidden">
+    <div
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] sm:w-[600px] sm:h-[450px] lg:w-[800px] lg:h-[600px] rounded-full blur-3xl"
+      style={{
+        background:
+          "radial-gradient(circle, rgba(34,197,94,0.1) 0%, rgba(34,197,94,0.05) 40%, transparent 70%)",
+      }}
+    ></div>
+    <div
+      className="absolute top-10 sm:top-20 right-10 sm:right-20 w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 rounded-full blur-2xl"
+      style={{
+        background:
+          "radial-gradient(circle, rgba(74,222,128,0.08) 0%, transparent 70%)",
+      }}
+    ></div>
+    <div
+      className="absolute bottom-20 sm:bottom-32 left-10 sm:left-20 w-32 h-32 sm:w-48 sm:h-48 lg:w-60 lg:h-60 rounded-full blur-xl"
+      style={{
+        background:
+          "radial-gradient(circle, rgba(22,163,74,0.06) 0%, transparent 70%)",
+      }}
+    ></div>
+  </div>
+
+  <div className="max-w-6xl mx-auto relative z-10 text-center px-2 sm:px-4">
+    {/* Badge */}
+    <div className="flex justify-center mb-6 sm:mb-8">
+      <div className="inline-flex items-center gap-2 bg-[#799B4B]/10 border border-[#799B4B]/20 rounded-full px-3 sm:px-4 py-1.5 sm:py-[9px] backdrop-blur-sm">
+        <svg
+          className="w-3 h-3 sm:w-4 sm:h-4 text-[#799B4B]"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
         >
-          {/* Background image with 30% opacity */}
-          <div
-            className="absolute inset-0 opacity-30"
-            style={{
-              backgroundImage: `url('/images/ai-healthcare-bg.svg')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-          {/* Subtle grid pattern */}
-          <div
-            className="absolute inset-0 opacity-[0.02]"
-            style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
-              backgroundSize: "50px 50px",
-            }}
-          ></div>
-        </div>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M13 10V3L4 14h7v7l9-11h-7z"
+          />
+        </svg>
+        <span className="text-[#799B4B] text-[10px] sm:text-[12px] md:text-[13px] font-medium">
+          Enterprise AI Orchestration Platform
+        </span>
+      </div>
+    </div>
 
-        {/* Green glow effects */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Main central glow */}
-          <div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full blur-3xl"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(34,197,94,0.1) 0%, rgba(34,197,94,0.05) 40%, transparent 70%)",
-            }}
-          ></div>
+    {/* Heading */}
+    <h1 className="text-base sm:text-2xl md:text-4xl lg:text-[60px] xl:text-[70px] font-bold mb-6 sm:mb-8 leading-snug sm:leading-tight tracking-tight">
+      <span className="text-white">Deploy AI Agents. Deliver</span>
+      <br />
+      <span className="text-white">Results. </span>
+      <span className="text-[#799B4B]">Replace Overhead.</span>
+    </h1>
 
-          {/* Top right accent */}
-          <div
-            className="absolute top-20 right-20 w-80 h-80 rounded-full blur-2xl"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(74,222,128,0.08) 0%, transparent 70%)",
-            }}
-          ></div>
+    {/* Subtitle */}
+    <p className="text-[10px] sm:text-sm md:text-base lg:text-lg xl:text-[19px] text-[#94A3B8] mb-10 sm:mb-12 max-w-2xl sm:max-w-3xl md:max-w-4xl mx-auto leading-relaxed font-light">
+      Connect AI-powered building blocks to create custom workflows that scale
+      with your enterprise practice operations and deliver measurable results.
+    </p>
 
-          {/* Bottom left accent */}
-          <div
-            className="absolute bottom-32 left-20 w-60 h-60 rounded-full blur-xl"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(22,163,74,0.06) 0%, transparent 70%)",
-            }}
-          ></div>
+    {/* Buttons */}
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-14 sm:mb-20">
+      <CustomButton
+        backgroundColor="#799B4B"
+        hoverBackgroundColor="#799B4B90"
+        className="shadow-[0_0_30px_rgba(121,155,75,0.3)] hover:shadow-[0_0_40px_rgba(121,155,75,0.4)]"
+        iconPosition="right"
+        icon={
+          <img
+            src="/images/arrow-icon.svg"
+            alt="Arrow"
+            className="filter brightness-0 invert w-4 h-4"
+          />
+        }
+      >
+        Deploy Your AI Workforce
+      </CustomButton>
+      <CustomButton
+        backgroundColor="rgba(255, 255, 255, 0.05)"
+        textColor="#FFFFFF"
+        hoverBackgroundColor="rgba(255, 255, 255, 0.1)"
+        className="border border-gray-600 hover:border-gray-400 backdrop-blur-sm"
+        iconPosition="left"
+        icon={<img src="/images/play-button.svg" alt="Play" className="w-4 h-4 sm:w-5 sm:h-5" />}
+      >
+        View Enterprise Demo
+      </CustomButton>
+    </div>
 
-          {/* Floating orbs */}
-          <div className="absolute top-1/4 right-1/4 w-4 h-4 bg-green-400/30 rounded-full blur-sm animate-pulse"></div>
-          <div
-            className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-green-300/40 rounded-full blur-sm animate-pulse"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute top-2/3 right-1/3 w-3 h-3 bg-green-500/25 rounded-full blur-sm animate-pulse"
-            style={{ animationDelay: "2s" }}
-          ></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto relative z-10 text-center">
-          {/* Top badge */}
-          <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-[#799B4B]/10 border border-[#799B4B]/20 rounded-full px-6 py-3 backdrop-blur-sm">
-              <svg
-                className="w-4 h-4 text-[#799B4B]"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-              <span className="text-[#799B4B] text-sm font-medium">
-                Enterprise AI Orchestration Platform
-              </span>
-            </div>
-          </div>
-
-          {/* Main headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[0.9] tracking-tight">
-            <span className="text-white">Deploy AI Agents. Deliver</span>
-            <br />
-            <span className="text-white">Results. </span>
-            <span className="text-[#799B4B]">Replace Overhead.</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl text-[#94A3B8] mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            Connect AI-powered building blocks to create custom workflows that
-            scale with your enterprise practice operations and deliver
-            measurable results.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-            <CustomButton
-              backgroundColor="#799B4B"
-              hoverBackgroundColor="#799B4B90"
-              className="shadow-[0_0_30px_rgba(121,155,75,0.3)] c hover:shadow-[0_0_40px_rgba(121,155,75,0.4)]"
-              iconPosition="right"
-              icon={
-                <img
-                  src="/images/arrow-icon.svg"
-                  alt="Arrow"
-                  className="filter brightness-0 invert"
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                    minWidth: "16px",
-                    minHeight: "16px",
-                  }}
-                />
-              }
-            >
-              Deploy Your AI Workforce
-            </CustomButton>
-            <CustomButton
-              backgroundColor="rgba(255, 255, 255, 0.05)"
-              textColor="#FFFFFF"
-              hoverBackgroundColor="rgba(255, 255, 255, 0.1)"
-              className="border border-gray-600 hover:border-gray-400 backdrop-blur-sm"
-              iconPosition="left"
-              icon={
-                <img
-                  src="/images/play-button.svg"
-                  alt="Play"
-                  className="w-5 h-5"
-                />
-              }
-            >
-              View Enterprise Demo
-            </CustomButton>
-          </div>
-
-          {/* Stats Grid */}
-          <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-12  mx-auto"
-            style={{
-              width: "672px",
-              height: "120px",
-            }}
-          >
-            {/* Healthcare Facilities */}
-            <div className="text-center group">
-              <div className="mb-6 flex justify-center">
-                <div className="w-16 h-16 bg-[#799B4B]/10 border border-[#799B4B]/10 rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:bg-[#799B4B]/15 group-hover:border-[#799B4B]/20 transition-all duration-300">
-                  <img
-                    src="/images/healthcare-facilities-new.svg"
-                    alt="Healthcare Facilities"
-                    className="w-8 h-8"
-                  />
-                </div>
-              </div>
-              <div className="text-5xl font-bold text-[#799B4B] mb-3 tracking-tight">
-                500+
-              </div>
-              <div className="text-[#94A3B8] text-base font-medium">
-                Healthcare Facilities
-              </div>
-            </div>
-
-            {/* Claims Processed */}
-            <div className="text-center group">
-              <div className="mb-6 flex justify-center">
-                <div className="w-16 h-16 bg-[#799B4B]/10 border border-[#799B4B]/10 rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:bg-[#799B4B]/15 group-hover:border-[#799B4B]/20 transition-all duration-300">
-                  <svg
-                    className="w-8 h-8 text-[#799B4B]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="text-5xl font-bold text-[#799B4B] mb-3 tracking-tight">
-                $3B+
-              </div>
-              <div className="text-[#94A3B8] text-base font-medium">
-                Claims Processed
-              </div>
-            </div>
-
-            {/* Average ROI */}
-            <div className="text-center group">
-              <div className="mb-6 flex justify-center">
-                <div className="w-16 h-16 bg-[#799B4B]/10 border border-[#799B4B]/10 rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:bg-[#799B4B]/15 group-hover:border-[#799B4B]/20 transition-all duration-300">
-                  <svg
-                    className="w-8 h-8 text-[#799B4B]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="text-5xl font-bold text-[#799B4B] mb-3 tracking-tight">
-                21X
-              </div>
-              <div className="text-[#94A3B8] text-base font-medium">
-                Average ROI
-              </div>
-            </div>
+    {/* Stats Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mx-auto w-full max-w-[700px]">
+      {/* 1 */}
+      <div className="text-center group">
+        <div className="mb-4 sm:mb-6 flex justify-center">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#799B4B]/10 border border-[#799B4B]/10 rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:bg-[#799B4B]/15 group-hover:border-[#799B4B]/20 transition-all duration-300">
+            <img src="/images/healthcare-facilities-new.svg" alt="Healthcare Facilities" className="w-6 h-6 sm:w-8 sm:h-8" />
           </div>
         </div>
-      </section>
+        <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#799B4B] mb-2 sm:mb-3 tracking-tight">
+          500+
+        </div>
+        <div className="text-[#94A3B8] text-xs sm:text-sm md:text-base font-medium">
+          Healthcare Facilities
+        </div>
+      </div>
+
+      {/* 2 */}
+      <div className="text-center group">
+        <div className="mb-4 sm:mb-6 flex justify-center">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#799B4B]/10 border border-[#799B4B]/10 rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:bg-[#799B4B]/15 group-hover:border-[#799B4B]/20 transition-all duration-300">
+            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#799B4B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+        </div>
+        <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#799B4B] mb-2 sm:mb-3 tracking-tight">
+          $3B+
+        </div>
+        <div className="text-[#94A3B8] text-xs sm:text-sm md:text-base font-medium">
+          Claims Processed
+        </div>
+      </div>
+
+      {/* 3 */}
+      <div className="text-center group">
+        <div className="mb-4 sm:mb-6 flex justify-center">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#799B4B]/10 border border-[#799B4B]/10 rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:bg-[#799B4B]/15 group-hover:border-[#799B4B]/20 transition-all duration-300">
+            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#799B4B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+        </div>
+        <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#799B4B] mb-2 sm:mb-3 tracking-tight">
+          21X
+        </div>
+        <div className="text-[#94A3B8] text-xs sm:text-sm md:text-base font-medium">
+          Average ROI
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* AI Workforce for 5 Healthcare Verticals */}
       <section className="py-20 px-6 bg-black">
