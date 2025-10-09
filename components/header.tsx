@@ -100,7 +100,7 @@ export default function Header() {
                       FAQ
                     </Link>
                     <Link
-                      href='#'
+                      href='/contact'
                       className='block px-6 py-2 text-sm text-[#FFFFFF] hover:rounded-sm hover:text-white hover:bg-[#799B4B20] transition-colors'
                       onClick={() => setIsDropdownOpen(false)}
                     >
@@ -270,7 +270,7 @@ export default function Header() {
                       FAQ
                     </Link>
                     <Link
-                      href='#'
+                      href='/contact'
                       className='block text-sm text-[#9096A2] hover:text-white transition-colors'
                       onClick={() => {
                         setIsMobileMenuOpen(false);
