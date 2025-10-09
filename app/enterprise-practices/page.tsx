@@ -248,7 +248,17 @@ export default function EnterprisePracticesPage() {
             </div>
           </div>
         </div>
-      </section>
+        <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#799B4B] mb-2 sm:mb-3 tracking-tight">
+          21X
+        </div>
+        <div className="text-[#94A3B8] text-xs sm:text-sm md:text-base font-medium">
+          Average ROI
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* AI Workforce for 5 Healthcare Verticals */}
       <section className="sm:py-20 py-15 px-4 sm:px-6 bg-black">
